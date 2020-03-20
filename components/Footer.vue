@@ -43,7 +43,7 @@
 
             <div class="bg-purple" id="footer-bottom">
                 <div class="container py-6">                    
-                    <p>Built by <a href="https://lorenzut.com" target="_blank">Patrick</a> in Portland, OR, USA.  <nuxt-link to="/terms">terms</nuxt-link> | <nuxt-link to="/privacy">privacy</nuxt-link> | <a href="mailto:patrick.lorenzut@gmail.com" >email me</a>.</p>
+                    <p>Built by <a href="https://lorenzut.com" target="_blank">Patrick</a> in Portland, OR, USA.  <nuxt-link to="/terms">terms</nuxt-link> | <nuxt-link to="/privacy">privacy</nuxt-link> | <a href="mailto:patrick@lorenzut.com" >email me</a>.</p>
                 </div>
             </div>
         </footer> 

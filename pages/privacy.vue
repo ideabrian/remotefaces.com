@@ -10,7 +10,7 @@
 
     <section>
         <div class="container py-10 max-w-2xl -mt-4 bg-white article">
-            <p>I’ll write a full privacy policy soon. For now, if you have questions that the short paragraph about didn't address, please <a href="mailto:patrick.lorenzut@gmail.com">email me</a>.</p>
+            <p>I’ll write a full privacy policy soon. For now, if you have questions that the short paragraph about didn't address, please <a href="mailto:patrick@lorenzut.com">email me</a>.</p>
         </div>
     </section>
 

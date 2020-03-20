@@ -3,7 +3,7 @@
         <header class="bg-purple text-yellow pt-40 pb-32 md:pt-48 md:pb-40">
             <div class="container text-center">
                 <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-yellow-gold max-w-4xl mx-auto">
-                    Cowork with us.
+                    Human Connection <br class="hidden md:block"/>While You Work From Home
                 </h1>
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">
                     Virtual coworking for remote teams, freelancers, and solopreneurs. Because it’s lonely out there, and a little human connection goes a long way.
@@ -58,12 +58,12 @@
             <div class="max-w-xl mx-auto">
                 <h2 class="text-purple text-4xl"><span class="bg-yellow">ROADMAP</span></h2>
                 <div class="article">
-                    <p>The following roadmap depends SOOOO MUCH on the type of feedback I get. Please <a href="mailto:patrick.lorenzut@gmail.com">email me</a> with some. That said, rough itinerary is as follows:</p>
+                    <p>The following roadmap depends SOOOO MUCH on the type of feedback I get. Please <a href="mailto:patrick@lorenzut.com">email me</a> with some. That said, rough itinerary is as follows:</p>
 
-                    <ol class="list-decimal">
-                        <li>Add video support for browsers that support it. Keep still image as fallback.</li>
+                    <ol class="list-decimal">                        
                         <li>Profile page where you can say who you are, contact info, what you're working on.</li>
                         <li>Add a link to contact people via zoom/hangouts/skype/whatever.</li>
+                        <li>Add video support for browsers that support it. Keep still image as fallback.</li>
                         <li>Teams/rooms. So, for example, you could see only fellow <em>IndieHackers</em> coworkers, or fellow coworkers from your company. These could be both locked and unlocked, aka private or public.</li>        
                         <li>Create a cool prize for the X people to log Y hours.</li>                                                                
                         <li>30 second live dance party every 30 minutes. Only for people who worked the past 30 minutes.</li>
