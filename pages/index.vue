@@ -55,13 +55,12 @@
 
                     <ol class="list-decimal">
                         <li>Profile page where you can say who you are, contact info, what you're working on.</li>
-                        <li>Add a link to contact people via zoom.</li>
+                        <li>Add a link to contact people via zoom/hangouts/skype/whatever.</li>
                         <li>Teams/rooms. So, for example, you could see only fellow <em>IndieHackers</em> coworkers, or fellow coworkers from your company. These could be both locked and unlocked, aka private or public.</li>        
                         <li>Create a cool prize for the X people to log Y hours.</li>                                        
+                        <li>30 second live dance party every 30 minutes. Only for people who worked the past 30 minutes.</li>
                         <li>Stats about hours logged, just like GitHub. So you can look back and see how many hours you worked in the coworking space each day.</li>
-                        <li>Live text chat. Click any online person and instantly live chat with them.</li>
-                        <li>Do Not Disturb. To opt out of the live text chat.</li>
-                        <li>Live video chat. Same as text chat, but a video call.</li>                        
+                        <li>Do Not Disturb. To opt out of the live text chat.</li>                        
                         <li>“Talk to Someone” button that pairs you randomly with another user for a 3 minute video chat. You’ll never talk to that person again unless you both click “yeah, I’d like to talk to that person again” after the call is over. This could be used to shoot the shit, or to bounce an idea off someone rando.</li>
                         <li>Watch Me Work javascript plugin that you can add to your own website.</li>
                         <li>Face-detection AI to detect whether you’re at your computer or not.</li>
@@ -117,12 +116,17 @@ export default {
                     'gifHeight': 320,
                     'numFrames': 20,                    
                 }, function(obj) {
-                    if(!obj.error) {                                                
+                    if(!obj.error) { 
                         that.workers.unshift({
                             image: obj.image,
                             username: 'test'
                         })
                         that.videoProgress = 'finished'
+                        that.$axios.post('/updateImage',{
+                            photo: obj.image
+                        }).then((result) => {
+                            
+                        }) 
                     }   
                 });
             }else{
