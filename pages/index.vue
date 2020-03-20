@@ -43,6 +43,7 @@
                     <p>
                         <strong>March 20, 2020:</strong> Launch v1. A stupidly simple MVP that uses your computer’s camera to record a 2-second GIF of you every 3 minutes when you have recording turned on. This GIF is shared publicly on the home page. That's all there is to it for now. More coming soon.
                     </p>
+                    <p>March 20, 2020: Added fallback still-photo support for browsers that don't support the <a href="https://github.com/yahoo/gifshot">GIF library</a> I’m using.</p>
                 </div>
             </div>
         </section>
@@ -106,8 +107,14 @@ export default {
             }            
         },
         async startWorking(){
+
+            if(!gifshot.isWebCamGIFSupported()){
+                alert('Ahhh, crud, Remote Faces doesn’t currently support your browser. But I’m working on ways to change that as fast as I can. Currently supported browsers are: Firefox 17+, Chrome 21+, Opera 18+, Blackberry Browser 10+, Opera Mobile 12+, Chrome For Android 35+, Firefox for Android 29+');
+                return false
+            }            
+
             this.videoProgress = 'loading'
-            this.updateProgressBar()  
+            this.updateProgressBar()              
             if(this.$store.getters.isLoggedIn){
                 //do this once every 3 minutes.
                 var that = this                
