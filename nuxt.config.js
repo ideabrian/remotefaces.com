@@ -47,7 +47,7 @@ export default {
   plugins: [
     { src: '~/plugins/tooltip.js'}, 
     { src: '~/plugins/cookie.js'}, 
-    { src: '~/plugins/analytics.js', mode: 'client' }
+    //{ src: '~/plugins/analytics.js', mode: 'client' }
     // { src: '~/plugins/markdown.js', ssr: true }
   ],
   /*

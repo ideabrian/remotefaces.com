@@ -1,5 +1,5 @@
 <template>    
-    <div class="absolute left-0 top-0 right-0 z-10" id="nav-wrapper" :class="{open: !isHidden}">
+    <div class="absolute left-0 top-0 right-0 z-10 bg-purple" id="nav-wrapper" :class="{open: !isHidden}">
         <nav id="top-nav" class="flex container items-center justify-between flex-wrap p-6">
             <div class="flex items-center flex-shrink-0 text-white lg:mr-16">
                 <nuxt-link to="/"><img src="/images/logo-white-tight.png" width="26" alt="For Human Sake Logo"/></nuxt-link>
