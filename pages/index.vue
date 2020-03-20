@@ -18,14 +18,17 @@
 
         <section class="mx-auto -mt-16 text-center container">                            
             <div class="max-w-6xl mx-auto mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">                                                
-
-                <button ref="yourFace" class="col-span-1 relative bg-purple-200 text-center rounded text-purple cursor-pointer hover:bg-yellow-200 content-center" style="border-radius:6px" @click="startWorking">
+                
+                <div v-show="videoProgress == 'loading'" class="col-span-1 relative bg-purple-200 rounded" style="border-radius:6px">
+                    <div class="absolute left-0 right-0 bottom-0 bg-purple" ref="progressBar"></div>
+                </div> 
+                <button v-show="videoProgress == 'blank'" ref="yourFace" class="col-span-1 relative bg-purple-200 text-center rounded text-purple cursor-pointer hover:bg-yellow-200 content-center" style="border-radius:6px" @click="startWorking">
                     <span class="text-6xl leading-snug -mt-2 block">+</span>Your Face Here
                 </button>
 
                 <nuxt-link :to="'/' + worker.username" class="col-span-1 relative" v-for="worker in workers" :key="worker.username">
                     <img :src="worker.image" :alt="worker.username" class="rounded"/>                     
-                    <div class="absolute" style="background:green;left:10px;top:10px;width:14px;height:14px;border-radius:50%"></div>
+                    <span class="absolute block" style="background:green;left:10px;top:10px;width:14px;height:14px;border-radius:50%"></span>
                 </nuxt-link>
             </div>            
         </section>
@@ -81,6 +84,8 @@ export default {
     },
     data: function(){
         return { 
+            videoProgress: 'blank',
+            videoProgressPercentage: 0,
             workers: [
                 {
                     image: '/images/demo.gif',
@@ -93,21 +98,31 @@ export default {
         
     },
     methods: {
+        async updateProgressBar(){            
+            this.videoProgressPercentage = this.videoProgressPercentage + 1
+            this.$refs.progressBar.style.height = this.videoProgressPercentage + "%"
+
+            if(this.videoProgressPercentage < 100){
+                setTimeout(this.updateProgressBar, 100)
+            }            
+        },
         async startWorking(){
-            
+            this.videoProgress = 'loading'
+            this.updateProgressBar()  
             if(this.$store.getters.isLoggedIn){
                 //do this once every 3 minutes.
-                var that = this
+                var that = this                
                 gifshot.createGIF({
                     'gifWidth': 480,
                     'gifHeight': 320,
-                    'numFrames': 20,
+                    'numFrames': 20,                    
                 }, function(obj) {
-                    if(!obj.error) {
-                        that.workers.push({
+                    if(!obj.error) {                                                
+                        that.workers.unshift({
                             image: obj.image,
                             username: 'test'
                         })
+                        that.videoProgress = 'finished'
                     }   
                 });
             }else{

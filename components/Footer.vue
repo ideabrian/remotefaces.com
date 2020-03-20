@@ -15,7 +15,7 @@
                             <div v-if="subscribed" class="col-span-2 md:col-span-1 p-4">
                                 <h3 class="font-bold text-2xl mb-2 text-teal">One last thing...</h3>
                                 <div class="max-w-md mx-auto">
-                                    <p class="mb-2">Thanks for subscribing! Please click the confirmation link in the email we just sent you. Your subscription <strong>will not be complete</strong> until you do so. Because spam.</p>
+                                    <p class="mb-2">Thanks for subscribing! Please click the confirmation link in the email I just sent you (please check your spam folder). Your subscription <strong>will not be complete</strong> until you do so.</p>
                                 </div>
                             </div>
                             <div v-else class="col-span-2 md:col-span-1 bg-purple-100 p-6 rounded">                            
@@ -33,7 +33,7 @@
                             <div class="col-span-2 md:col-span-1 p-4">
                                 <h3 class="font-bold text-2xl mb-2">Sorry for the mess!</h3>
                                 <div class="max-w-md mx-auto">
-                                    <p class="mb-2">FHS officially launches on April 1, 2020. Which means you’re looking at a horribly unfinished website. I'll make it up to you.</p>
+                                    <p class="mb-2">In lean-starup fashion, I launched this thing within 8 hours of getting the idea, so... it’s a hectic work in progress right now. Please hang in there with me! Updates are being developed like mad.</p>
                                 </div>
                             </div>
                         </template>

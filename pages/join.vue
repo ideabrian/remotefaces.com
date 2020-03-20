@@ -39,7 +39,7 @@
       };
     },
     head: {
-      title: 'Apply to Join FHS',
+      title: 'Join Remote Faces',
     },
     methods: {
       finishApplication(){
@@ -54,7 +54,7 @@
         try {            
             await this.$axios.post('/register', {
               email: this.email,
-              name: this.name,
+              username: this.username,
               password: this.password
             }).then((result) => {
               if(result.data && result.data.success){
@@ -64,7 +64,7 @@
                       password: this.password
                     },
                   }).then((result) => {
-                    this.$router.push('/thanks')
+                    this.$router.push('/')
                 })
               }      
             })
@@ -72,6 +72,12 @@
             var error_message = 'Unable to register.'
             if(e.response.data.email){
               error_message = e.response.data.email
+            }
+            else if(e.response.data.username){
+              error_message = e.response.data.username
+            }
+            else if(e.response.data.password){
+              error_message = e.response.data.password
             }
             this.$toast.error(error_message)
             this.isLoading = false
