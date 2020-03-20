@@ -131,7 +131,7 @@
 
   export default {    
     head: {
-      title: 'Terms of Service - For Human Sake',
+      title: 'Terms of Service - Remote Faces',
     },
   }
 </script>

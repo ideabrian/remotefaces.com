@@ -24,7 +24,7 @@ export default {
     ]
   },
   env: {
-    appName: 'For Human Sake',
+    appName: 'Remote Faces Coworking',
     baseUrl: process.env.BASE_URL,
     baseApiUrl: process.env.API_BASE_URL,
     tokenName: 'satellizer_token',

@@ -1,8 +1,7 @@
 export const state = () => ({
     _currentUser: null,
     _token: null,
-    toast: null, //if we have an alert to show    
-    todo: 'TODO. For Human Sake officially launches on April 1st, 2020... and this is one of the pieces that still needs to be finished before then. <a href="/join" class="link">Become a member</a> before that April 1st launch - while we’re still working on things - and get 50% off for life ($10/mo instead of $20/mo).'
+    toast: null
 })
 
 export const mutations = {

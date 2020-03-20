@@ -1,6 +1,6 @@
-# For Human Sake
+# Remote Faces
 
-> Mental Health for Tech Workers
+> Virtual Coworking for Remote Workers, Solopreneurs, and Freelancers
 
 ## Build Setup
 
