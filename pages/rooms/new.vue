@@ -13,7 +13,7 @@
                     <label class="label font-bold">Slug</label>                    
                     <input v-model="slug" v-validate="'required|alpha_dash|max:15'" spellcheck="false" type="text" name="slug" placeholder="slug" class="input mt-1 mb-2">                  
                     <span class="help is-danger">{{ errors.first('slug') }}</span>
-                    <p class="text-sm">Find your room at remotefaces.com/rooms/{{ slug ? slug : 'SLUG' }}</p>
+                    <p class="text-sm">Find your room at remotefaces.com/{{ slug ? slug : 'SLUG' }}</p>
                 </div>
                 <div class="mt-6 hidden">
                     <label class="label font-bold">Privacy</label>     
@@ -75,6 +75,7 @@ export default {
                     }      
                 })          
             } catch (e) {
+                console.log(e)
                 var error_message = 'Unable to create room.'
                 if(e.response.data.name){
                     error_message = e.response.data.name

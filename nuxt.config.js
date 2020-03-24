@@ -80,7 +80,7 @@ export default {
       //   domains: ['domain.com','domain.org']
       // }
     },
-    debug: true // enable to track in dev mode
+    debug: false // enable to track in dev mode
   },
   toast: {
     position: 'top-center',
