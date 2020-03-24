@@ -48,6 +48,9 @@
                         <li>Add status, so other people can see what you're working on. This should help with accountability. And should also help the place feel more alive as the majoriy of pictures taken will be pretty similar.</li>
                         <li>Add a notes section to top of room where room owners can add links to slack/zoom/hangouts/skype/whatever.</li>
                         <li>Add video support for browsers that support it. Keep still image as fallback.</li>        
+                        <li>Add map so people can see where everyone else is working from.</li>
+                        <li>Translate into Spanish.</li>
+                        <li>Add https://meet.jit.si support.</li>
                         <li>Create a cool prize for the X people to log Y hours.</li>                                                                
                         <li>30 second live dance party every 30 minutes. Only for people who worked the past 30 minutes.</li>
                         <li>Stats about hours logged, just like GitHub. So you can look back and see how many hours you worked in the coworking space each day.</li>
