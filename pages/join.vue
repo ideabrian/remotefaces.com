@@ -4,8 +4,9 @@
     <form class="form">
       <div class="field">
         <label class="label ">Username</label>
-        <input class="input" type="text" v-model="username" name="username" v-validate="'required'" placeholder="groovysauce"/>
+        <input class="input" type="text" v-model="username" name="username" v-validate="'required|alpha_dash|max:15'" placeholder="groovysauce"/>
         <span class="mt-1 help is-danger">{{ errors.first('username') }}</span>                
+        <p class="text-sm opacity-50">remotefaces.com/{{ username ? username : 'SLUG' }}</p>
       </div>                            
       <div class="field">
         <label class="label mt-4">Email Address</label>

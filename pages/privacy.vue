@@ -3,7 +3,7 @@
     <header class="pt-40 pb-20">
         <div class="container text-center">
             <h1 class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-none">Privacy Policy</h1>
-            <h2 class="mt-10 text-xl sm:text-2xl md:text-2xl lg:text-3xl leading-tight mx-auto max-w-3xl text-white">This site uses some cookies. Because it’s a webapp and it needs to. But none from Google, Facebook, etc. Also I’ll never sell your data.</h2>
+            <h2 class="mt-10 text-xl sm:text-2xl md:text-2xl lg:text-3xl leading-tight mx-auto max-w-3xl">This site uses some cookies. Because it’s a webapp and it needs to. But none from Google, Facebook, etc. Also I’ll never sell your data.</h2>
 
         </div>
     </header>

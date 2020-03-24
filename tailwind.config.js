@@ -11,6 +11,9 @@ module.exports = {
             padding: '2rem',
         },
         colors: {
+            black:{
+                default: '#333'
+            },
             white: '#ffffff',
             purple: {
                 default: '#541388' ,

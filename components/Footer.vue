@@ -8,7 +8,7 @@
                         <div class="col-span-2 md:col-span-1 p-4">
                             <h3 class="font-bold text-2xl mb-2">100% for COVID-19.</h3>
                             <div class="max-w-md mx-auto">
-                                <p class="mb-2">100% of profits (if any) from now until at least May 1 will be donated to charities fighting COVID-19. Will reassess on May 1.</p>                        
+                                <p class="mb-2">100% of profits (if any) from now until at least May 1 will be donated to charities fighting COVID-19. <br class="hidden xl:block"/>I will reassess on May 1.</p>                        
                             </div>
                         </div>
                         <template v-if="!$store.getters.isLoggedIn">
