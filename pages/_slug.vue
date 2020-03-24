@@ -18,7 +18,7 @@
 
                     <div v-if="$store.getters.isLoggedIn">
                         <div class="text-white text-purple-300 mt-8 mb-2 text-sm">Invite link:</div>
-                        <span class="bg-yellow-200 py-2 px-4 text-purple">https://remotefaces.com/{{ room.slug }}/{{ room.token }}{{ $store.getters.memberProfile.id }}</span>
+                        <span class="bg-yellow-200 py-2 px-4 text-purple">https://remotefaces.com/rooms/{{ room.slug }}/{{ room.token }}{{ $store.getters.memberProfile.id }}</span>
                     </div>
                 </div>
             </header>
