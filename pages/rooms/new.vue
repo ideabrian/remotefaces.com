@@ -71,7 +71,7 @@ export default {
                     privacy: this.privacy,
                 }).then((result) => {
                     if(result.data){
-                        this.$router.push('/rooms/' + result.data.slug)    
+                        this.$router.push('/' + result.data.slug)    
                     }      
                 })          
             } catch (e) {

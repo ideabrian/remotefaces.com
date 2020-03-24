@@ -11,17 +11,14 @@
             </div>
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto text-center lg:text-left text-lg lg:text-base" :class="{hidden: isHidden}">
                 <div class="lg:flex-grow" id="main-links">
-                    <!-- <nuxt-link v-if="$store.getters.isLoggedIn" to="/rooms" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">my rooms</nuxt-link>  -->
-                    
-                    <nuxt-link to="/" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">cowork</nuxt-link> 
-
-                    <nuxt-link to="/codance" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">codance</nuxt-link> 
-                    
-                    <nuxt-link to="/comingle" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">comingle</nuxt-link> 
-                    
-                    
-                    <!-- <nuxt-link to="/hangout" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">hangout</nuxt-link> -->
-                    <!-- <nuxt-link to="/about" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">about</nuxt-link>                     -->
+                    <template v-if="$store.getters.isLoggedIn">
+                        <nuxt-link to="/rooms" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">my rooms</nuxt-link> 
+                    </template>
+                    <template v-else>
+                        <nuxt-link to="/" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">cowork</nuxt-link> 
+                        <nuxt-link to="/codance" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">codance</nuxt-link>                     
+                        <nuxt-link to="/comingle" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">comingle</nuxt-link> 
+                    </template>
                 </div>
                 <div v-if="$store.getters.isLoggedIn">
                     <nuxt-link to="/logout" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white py-1">logout</nuxt-link>

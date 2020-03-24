@@ -17,7 +17,7 @@
         </header>
 
         <section class="mx-auto -mt-16 text-center container">                            
-            <RoomWorkers ref="roomWorkersCom" :room_slug="'test'"/>                     
+            <RoomWorkers ref="roomWorkersCom" :room_id="'1'"/>                     
         </section>
         
 
@@ -27,6 +27,12 @@
                 <div class="article">
                     <p>
                         <strong>March 20, 2020:</strong> Launch v1. A stupidly simple MVP that uses your computer’s camera to take a still photo of you every 10 seconds and shares it publicly on the home page. That's all there is to it for now. More coming soon.
+                    </p>
+                    <p>
+                        <strong>March 23, 2020:</strong> Add Rooms. Any user can create a room. For now all rooms are private, so one can only gain accesss to a room via a special invite link that room members have access to. The only public room is the one you see right here on the home page.
+                    </p>
+                    <p>
+                        <strong>March 24, 2020:</strong> Properly display whether people are online or not, and whether they are in this specific room or not. Any given can only be in one room at any time. Because this is trying to mimic working in an office, at a coffee shop, or at a library. You can only be in one of those places at a time.
                     </p>
                 </div>
             </div>
@@ -39,10 +45,9 @@
                     <p>The following roadmap depends SOOOO MUCH on the type of feedback I get. Please <a href="mailto:patrick@lorenzut.com">email me</a> with some. That said, rough itinerary is as follows:</p>
 
                     <ol class="list-decimal">                        
-                        <li>Profile page where you can say who you are, contact info, what you're working on.</li>
-                        <li>Add a link to contact people via zoom/hangouts/skype/whatever.</li>
-                        <li>Add video support for browsers that support it. Keep still image as fallback.</li>
-                        <li>Teams/rooms. So, for example, you could see only fellow <em>IndieHackers</em> coworkers, or fellow coworkers from your company. These could be both locked and unlocked, aka private or public.</li>        
+                        <li>Add status, so other people can see what you're working on. This should help with accountability. And should also help the place feel more alive as the majoriy of pictures taken will be pretty similar.</li>
+                        <li>Add a notes section to top of room where room owners can add links to slack/zoom/hangouts/skype/whatever.</li>
+                        <li>Add video support for browsers that support it. Keep still image as fallback.</li>        
                         <li>Create a cool prize for the X people to log Y hours.</li>                                                                
                         <li>30 second live dance party every 30 minutes. Only for people who worked the past 30 minutes.</li>
                         <li>Stats about hours logged, just like GitHub. So you can look back and see how many hours you worked in the coworking space each day.</li>
@@ -72,5 +77,6 @@ export default {
     components: {
         RoomWorkers
     }
+    //this.$gtag('event', 'your_event', { /* track something awesome */})
 }
 </script>

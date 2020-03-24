@@ -69,7 +69,19 @@ export default {
     '@nuxtjs/auth',
     'nuxt-validate',
     '@nuxtjs/toast',
+    '@nuxtjs/google-gtag'
   ],
+  'google-gtag': {
+    id: 'UA-161763732-1',
+    config: {
+      anonymize_ip: true, // anonymize IP 
+      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+      // linker: {
+      //   domains: ['domain.com','domain.org']
+      // }
+    },
+    debug: true // enable to track in dev mode
+  },
   toast: {
     position: 'top-center',
     duration: 4000

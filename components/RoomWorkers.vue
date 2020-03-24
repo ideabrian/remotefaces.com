@@ -12,22 +12,24 @@
             <span class="text-6xl leading-snug -mt-2 block">+</span>Your Face Here
         </button>
 
-        <div class="col-span-1 relative" v-for="worker in workers" :key="worker.username">
-            <img :src="'https://remotefaces.s3.amazonaws.com/' + worker.image_url" :alt="worker.username" class="rounded" width="480" height="320"/>                     
-            <span class="absolute block" style="background:green;left:10px;top:10px;width:14px;height:14px;border-radius:50%"></span>
-        </div>
+        <RoomWorker :worker="worker" :room_id="room_id" v-for="worker in workers" :key="worker.username"/>
+        
     </div>   
 </template>
 <script>
+import RoomWorker from '~/components/RoomWorker.vue';
 export default {       
-    props: ['room_slug'], 
+    props: ['room_id'], 
     data: function(){
         return { 
             streaming: false,
             workers: []
         }
     },
-    methods: {
+    components: {
+        RoomWorker
+    },
+    methods: {        
         async updateProgressBar(){            
             this.videoProgressPercentage = this.videoProgressPercentage + 1
             this.$refs.progressBar.style.height = this.videoProgressPercentage + "%"
@@ -43,7 +45,8 @@ export default {
             context.drawImage(video, 0, 0, 480, 320);
             var data = canvas.toDataURL('image/jpeg');
             this.$axios.post('/updateImage',{
-                photo: data
+                photo: data,
+                room_id: this.room_id
             }).then((result) => {
                 if(result && result.data){
                     this.workers = result.data
@@ -83,7 +86,7 @@ export default {
         },        
         async getWorkers(){
             if(!this.streaming){
-                this.$axios.get('/getWorkers').then((result) => {
+                this.$axios.get('/getWorkers/' + this.room_id).then((result) => {
                     this.workers = result.data
                 })
                 setTimeout(this.getWorkers, 5000)

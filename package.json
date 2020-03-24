@@ -14,6 +14,7 @@
     "@daily-co/daily-js": "^0.9.983",
     "@nuxtjs/auth": "^4.8.5",
     "@nuxtjs/axios": "^5.9.5",
+    "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/toast": "^3.3.0",
     "dotenv": "^8.2.0",
     "node-sass": "^4.13.1",

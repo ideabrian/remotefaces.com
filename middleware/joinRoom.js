@@ -7,7 +7,7 @@ export default function ({ store, redirect }) {
                 slug: room_deets[0],
                 token: room_deets[1]
             }).then((result) => {
-                $nuxt.$router.push('/rooms/' + room_deets[0])
+                $nuxt.$router.push('/' + room_deets[0])
             }) 
         } catch (e) {            
             console.log(e);

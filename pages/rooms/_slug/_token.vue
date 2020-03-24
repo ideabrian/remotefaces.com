@@ -27,11 +27,11 @@ export default {
                     slug: this.slug,
                     token: this.token
                 }).then((result) => {
-                    $nuxt.$router.push('/rooms/' + this.slug)
+                    $nuxt.$router.push('/' + this.slug)
                 }) 
             } catch (e) {
                 if(e.response && e.response.data.warning){
-                    $nuxt.$router.push('/rooms/' + this.slug)
+                    $nuxt.$router.push('/' + this.slug)
                 }
                 //TODO handle other cases like where token is invalid
             }

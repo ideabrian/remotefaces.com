@@ -121,6 +121,25 @@ button:disabled, button[disabled]{
     display: block;
 }
 
+.worker{	
+	filter: grayscale(100%);
+	.online-dot{
+		background:green;
+		left:10px;
+		top:10px;
+		width:14px;
+		height:14px;
+		border-radius:50%;
+		display: none;
+	}
+	&.online{
+		filter: none;
+		.online-dot{
+			display: block;
+		}
+	}
+}
+
 @import 'article';
 @import "navigation";
 @import 'form';

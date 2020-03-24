@@ -12,7 +12,7 @@
                 <nuxt-link to="/rooms/new" class="col-span-1 relative bg-purple-200 hover:bg-purple text-purple hover:text-white py-4" style="border-radius:6px">
                     Create a New Room
                 </nuxt-link>
-                <nuxt-link v-for="room in rooms" :key="room.id" :to="'/rooms/' + room.slug" class="col-span-1 relative bg-yellow-200 py-4 hover:bg-purple text-purple hover:text-white font-bold" style="border-radius:6px">
+                <nuxt-link v-for="room in rooms" :key="room.id" :to="'/' + room.slug" class="col-span-1 relative bg-yellow-200 py-4 hover:bg-purple text-purple hover:text-white font-bold" style="border-radius:6px">
                     {{ room.name }}
                 </nuxt-link>
             </div>
