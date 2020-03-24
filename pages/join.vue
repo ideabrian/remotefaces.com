@@ -58,7 +58,7 @@
               username: this.username,
               password: this.password
             }).then((result) => {
-              if(result.data && result.data.success){
+              if(result.data && result.data.user){
                 this.$auth.loginWith('local', {
                     data: {
                       email: this.email,
