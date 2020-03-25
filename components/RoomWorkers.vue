@@ -77,6 +77,7 @@ export default {
 
             navigator.mediaDevices.getUserMedia({ video: true, audio: false })
             .then(function(stream) {
+                
                 if ("srcObject" in video) {
                     video.srcObject = stream;
                 } else {

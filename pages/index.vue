@@ -6,7 +6,7 @@
                     Human Connection <br class="hidden md:block"/>While We Work From Home
                 </h1>
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">
-                    Virtual coworking for remote teams, freelancers, and solopreneurs. Because (most of the time) it’s wonderful to be around other humans. Also, there’s dancing.
+                    Virtual coworking for remote teams and online communities. Because (most of the time) it’s wonderful to be around other humans. Also, there’s dancing.
                 </h2> 
 
                 <nuxt-link class="button" to="/rooms/new">Create a Room</nuxt-link>
