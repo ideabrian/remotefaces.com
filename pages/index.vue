@@ -6,17 +6,57 @@
                     Human Connection <br class="hidden md:block"/>While We Work From Home
                 </h1>
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">
-                    Virtual coworking for remote teams and online communities. Because (most of the time) it’s wonderful to be around other humans. Also, there’s dancing.
+                    Virtual coworking for remote workers, solopreneurs, and freelancers. Because (most of the time) it’s wonderful to be around other humans. Also, there’s dancing.
                 </h2> 
 
                 <nuxt-link class="button" to="/rooms/new">Create a Room</nuxt-link>
-                <nuxt-link class="button" to="/demo">View/Join Demo</nuxt-link>
+                <p>or join the demo room below</p>
             </div>
         </header>
 
-        <section class="container mt-20">
+
+        <section class="mx-auto -mt-16 text-center container">
+            <RoomWorkers ref="roomWorkersCom" :room_id="1"/>
+        </section>
+
+
+        <section class="mt-40">
             <div class="max-w-xl mx-auto">
-                <h2 class="text-purple text-4xl"><span class="bg-yellow">CHANGELOG</span></h2>
+                <h2 class="text-purple text-4xl leading-tight">The first platform to focus on producitivty <strong>AND</strong> mental health.*</h2>
+                <span class="bg-yellow">* That might not actually be true, but it sounds cool 😁</span>
+                <div class="article mt-4">
+                    <p>I built Remote Faces because I'm lonely. And when I'm lonely I get depressed, and when I get depressed I stare at my screen instead of doing real work.</p>
+                    <p>I'm passionate about mental health even more than I am about productivity and accountability, and I’m <em>especially</em> interested in where all of these things intersect.</p>
+                    <p>If you’ve tried all the productivity apps and the producitiity hacks and they didn’t wondrously solve all of your problems... well I’m pretty inclined to think that the answer to all of our tech-related anxiety and procrastination problems ISN'T more tech... but instead is MORE HUMAN CONNECTION.</p>
+                    <p>Of course, technically speaking, Remote Faces <em>is</em> tech. But there's a big difference between tech that tries to facilitate human connection and tech that tries to automate it.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-40">
+            <div class="max-w-xl mx-auto">
+                <h2 class="text-purple text-4xl leading-tight">Put a camera on yourself and watch your focus skyrocket.</h2>
+                <div class="article mt-4">
+                    <p>I’ll write this section tomorrow</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-40">
+            <div class="max-w-xl mx-auto">
+                <h2 class="text-purple text-4xl leading-tight">But before you start working... what do you plan on accomplishing?</h2>
+                <div class="article mt-4">
+                    <p>I’ll write this section tomorrow</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-40 py-20 -mb-40 bg-yellow-200">
+            <div class="max-w-xl mx-auto">    
+
+                <p class="mb-20"><em>Remote Faces was an idea that <a class="link" href="https://lorenzut.com" target="_blank">this guy</a> had on March 20th. It's coming along nicely, but please keep in mind that it's only {{ days_old }} days old (precise measurements are sexy). Or in other words: please <a href="https://www.pbh2.com/wordpress/wp-content/uploads/2013/07/Bear-GIFS-dancing.gif" target="_blank">bear</a> with me! And if you’d like to do more than just <a href="https://www.pbh2.com/wordpress/wp-content/uploads/2013/07/Bear-GIFS-dancing.gif" target="_blank">bear</a> with me, please please please <a href="https://calendly.com/lorenzut/30min" target="_blank" class="link">setup a 30 minute call with me</a>. You can also follow progress below!</em></p>
+
+                <h2 class="text-purple text-4xl mb-4"><span class="bg-yellow">CHANGELOG</span></h2>
                 <div class="article">
                     <p>
                         <strong>March 20, 2020:</strong> Launch v1. A stupidly simple MVP that uses your computer’s camera to take a still photo of you every 10 seconds and shares it publicly on the home page. That's all there is to it for now. More coming soon.
@@ -28,12 +68,7 @@
                         <strong>March 24, 2020:</strong> Properly display whether people are online or not, and whether they are in this specific room or not. Any given can only be in one room at any time. Because this is trying to mimic working in an office, at a coffee shop, or at a library. You can only be in one of those places at a time.
                     </p>
                 </div>
-            </div>
-        </section>
-
-        <section class="container mt-20">
-            <div class="max-w-xl mx-auto">
-                <h2 class="text-purple text-4xl"><span class="bg-yellow">ROADMAP</span></h2>
+                <h2 class="text-purple text-4xl mt-20 mb-4"><span class="bg-yellow">ROADMAP</span></h2>
                 <div class="article">
                     <p>The following roadmap depends SOOOO MUCH on the type of feedback I get. Please <a href="mailto:patrick@lorenzut.com">email me</a> with some. That said, rough itinerary is as follows:</p>
 
@@ -56,10 +91,10 @@
                         <li>Personality questions, like OkCupid does, so you can work with people you jive with.</li>
                         <li>Time tracking.</li>
                     </ol>
-
                 </div>
             </div>
         </section>
+
 
     </div>
 </template>
@@ -69,6 +104,15 @@ import RoomWorkers from '~/components/RoomWorkers.vue';
 export default {        
     head: {
       title: 'Virtual Coworking for Remote Workers',
+    },
+    computed: {
+        days_old: function(){
+            var now = new Date();
+            var start = new Date('March 20, 2020');
+            var difference = now - start;
+            var days_old = (difference / (1000*60*60*24))
+            return days_old
+        }
     },
     components: {
         RoomWorkers
