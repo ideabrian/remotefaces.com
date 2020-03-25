@@ -33,7 +33,6 @@
 <script>
 import RoomWorkers from '~/components/RoomWorkers.vue'
 export default {        
-    middleware: 'member',
     head: {
       title: 'Virtual Coworking for Remote Workers',
     },
