@@ -21,11 +21,11 @@
 
 
         <section class="mt-40">
-            <div class="max-w-xl mx-auto">
+            <div class="max-w-xl mx-auto container">
                 <h2 class="text-purple text-4xl leading-tight">The first platform to focus on producitivty <strong>AND</strong> mental health.*</h2>
                 <span class="bg-yellow">* That might not actually be true, but it sounds cool 😁</span>
                 <div class="article mt-4">
-                    <p>I built Remote Faces because I'm lonely. And when I'm lonely I get depressed, and when I get depressed I stare at my screen instead of doing real work.</p>
+                    <p>I built Remote Faces because I get lonely really easily. When I'm lonely I get the blues, and when I get the blues I stare at my screen instead of doing real work. Which makes me feel like shit about myself, thereby furthering my depressed procrastination.</p>
                     <p>I'm passionate about mental health even more than I am about productivity and accountability, and I’m <em>especially</em> interested in where all of these things intersect.</p>
                     <p>If you’ve tried all the productivity apps and the producitiity hacks and they didn’t wondrously solve all of your problems... well I’m pretty inclined to think that the answer to all of our tech-related anxiety and procrastination problems ISN'T more tech... but instead is MORE HUMAN CONNECTION.</p>
                     <p>Of course, technically speaking, Remote Faces <em>is</em> tech. But there's a big difference between tech that tries to facilitate human connection and tech that tries to automate it.</p>
@@ -34,7 +34,7 @@
         </section>
 
         <section class="mt-40">
-            <div class="max-w-xl mx-auto">
+            <div class="max-w-xl mx-auto container">
                 <h2 class="text-purple text-4xl leading-tight">Put a camera on yourself and watch your focus skyrocket.</h2>
                 <div class="article mt-4">
                     <p>I’ll write this section tomorrow</p>
@@ -43,7 +43,7 @@
         </section>
 
         <section class="mt-40">
-            <div class="max-w-xl mx-auto">
+            <div class="max-w-xl mx-auto container">
                 <h2 class="text-purple text-4xl leading-tight">But before you start working... what do you plan on accomplishing?</h2>
                 <div class="article mt-4">
                     <p>I’ll write this section tomorrow</p>
@@ -52,7 +52,7 @@
         </section>
 
         <section class="mt-40 py-20 -mb-40 bg-yellow-200">
-            <div class="max-w-xl mx-auto">    
+            <div class="max-w-xl mx-auto container">    
 
                 <p class="mb-20"><em>Remote Faces was an idea that <a class="link" href="https://lorenzut.com" target="_blank">this guy</a> had on March 20th. It's coming along nicely, but please keep in mind that it's only {{ days_old }} days old (precise measurements are sexy). Or in other words: please <a href="https://www.pbh2.com/wordpress/wp-content/uploads/2013/07/Bear-GIFS-dancing.gif" target="_blank">bear</a> with me! And if you’d like to do more than just <a href="https://www.pbh2.com/wordpress/wp-content/uploads/2013/07/Bear-GIFS-dancing.gif" target="_blank">bear</a> with me, please please please <a href="https://calendly.com/lorenzut/30min" target="_blank" class="link">setup a 30 minute call with me</a>. You can also follow progress below!</em></p>
 
