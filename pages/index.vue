@@ -10,16 +10,9 @@
                 </h2> 
 
                 <nuxt-link class="button" to="/rooms/new">Create a Room</nuxt-link>
-                <div>
-                    Or join the free-for-all below.
-                </div>
+                <nuxt-link class="button" to="/demo">View/Join Demo</nuxt-link>
             </div>
         </header>
-
-        <section class="mx-auto -mt-16 text-center container">                            
-            <RoomWorkers ref="roomWorkersCom" :room_id="'1'"/>                     
-        </section>
-        
 
         <section class="container mt-20">
             <div class="max-w-xl mx-auto">
