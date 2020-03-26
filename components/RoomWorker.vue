@@ -21,10 +21,9 @@ export default {
             return this.worker.file.amazon_url
         },
         isOnline: function() {
-            var now = new Date()
-            var now_utc =  Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
+            var now = Date.now()
             var last_update = new Date(this.worker.updated_at)
-            var difference = Math.floor((now_utc - last_update) / 1000)
+            var difference = Math.floor((now - last_update) / 1000)
 
             this.ago = difference
 
