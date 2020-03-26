@@ -23,8 +23,8 @@ export default {
         isOnline: function() {
             var now = Date.now()
             var last_update = new Date(this.worker.updated_at)
+            last_update = last_update.getTime()
             var difference = Math.floor((now - last_update) / 1000)
-
             this.ago = difference
 
             if(difference <= 60){
