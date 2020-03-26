@@ -68,7 +68,7 @@
                         <strong>March 24, 2020:</strong> Properly display whether people are online or not, and whether they are in this specific room or not. Any given can only be in one room at any time. Because this is trying to mimic working in an office, at a coffee shop, or at a library. You can only be in one of those places at a time.
                     </p>
                     <p>
-                        <strong>March 25, 2020:</strong> Create animated gif with gifshot if supported. Keep using still images as fallback if gif not supported. Also at least temporarily switch to saving every 60 seconds instead of every 10 seconds.
+                        <strong>March 25, 2020:</strong> Create animated gif with <a href="https://github.com/yahoo/gifshot" target="_blank">gifshot</a> if supported. Keep using still images as fallback if gif not supported. Also at least temporarily switch to saving every 60 seconds instead of every 10 seconds.
                     </p>
                 </div>
                 <h2 class="text-purple text-4xl mt-20 mb-4"><span class="bg-yellow">ROADMAP</span></h2>

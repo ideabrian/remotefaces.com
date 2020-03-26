@@ -123,6 +123,11 @@ button:disabled, button[disabled]{
 
 .worker{	
 	filter: grayscale(100%);
+	.online-status{
+		left:10px;
+		top:10px;
+		line-height: 1;
+	}
 	.online-dot{
 		background:green;
 		left:10px;
@@ -130,13 +135,9 @@ button:disabled, button[disabled]{
 		width:14px;
 		height:14px;
 		border-radius:50%;
-		display: none;
 	}
 	&.online{
 		filter: none;
-		.online-dot{
-			display: block;
-		}
 	}
 }
 
