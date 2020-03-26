@@ -6,7 +6,7 @@
                     Human Connection <br class="hidden md:block"/>While We Work From Home
                 </h1>
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">
-                    Virtual coworking for remote workers, solopreneurs, and freelancers. Because (most of the time) it’s wonderful to be around other humans. Also, there’s dancing.
+                    Virtual coworking for remote teams, online communities, and solopreneurs. Trade in your loneliness for connection, accountability, motivation... and dancing.
                 </h2> 
 
                 <nuxt-link class="button" to="/rooms/new">Create a Room</nuxt-link>
@@ -27,7 +27,7 @@
                 <div class="article mt-4">
                     <p>I built Remote Faces because I get lonely really easily. When I'm lonely I get the blues, and when I get the blues I stare at my screen instead of doing real work. Which makes me feel like shit about myself, thereby furthering my depressed procrastination.</p>
                     <p>I'm passionate about mental health even more than I am about productivity and accountability, and I’m <em>especially</em> interested in where all of these things intersect. I believe that mental health is more important than productivity just like I believe that people are more important than profit. And at the same time, I think it's a mistake to be so binary in our thinking. Why can't we want and obtain multiple things at the same time?</p>
-                    <p>If you’ve tried all the productivity apps and the producitiity hacks and they didn’t wondrously morph you into a productivity superhero... well I’m pretty inclined to think that the answer to all of our tech-related anxiety and procrastination problems ISN'T more tech... but instead is MORE HUMAN CONNECTION.</p>
+                    <p>If you’ve tried all the productivity apps and they didn’t wondrously morph you into a productivity superhero... well I’m pretty inclined to think that the answer to all of our tech-related anxiety and procrastination problems ISN'T more tech... but instead is MORE HUMAN CONNECTION.</p>
                     <p>Of course, technically speaking, Remote Faces <em>is</em> tech. But there's a big difference between tech that tries to facilitate human connection and tech that tries to automate it.</p>
                 </div>
             </div>
