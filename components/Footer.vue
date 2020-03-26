@@ -47,6 +47,7 @@
                 </div>
             </div>
         </footer> 
+        <script src='/js/gifshot.js'></script>
     </div>   
 </template>
 

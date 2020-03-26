@@ -26,8 +26,8 @@
                 <span class="bg-yellow">* That might not actually be true, but it sounds cool 😁</span>
                 <div class="article mt-4">
                     <p>I built Remote Faces because I get lonely really easily. When I'm lonely I get the blues, and when I get the blues I stare at my screen instead of doing real work. Which makes me feel like shit about myself, thereby furthering my depressed procrastination.</p>
-                    <p>I'm passionate about mental health even more than I am about productivity and accountability, and I’m <em>especially</em> interested in where all of these things intersect.</p>
-                    <p>If you’ve tried all the productivity apps and the producitiity hacks and they didn’t wondrously solve all of your problems... well I’m pretty inclined to think that the answer to all of our tech-related anxiety and procrastination problems ISN'T more tech... but instead is MORE HUMAN CONNECTION.</p>
+                    <p>I'm passionate about mental health even more than I am about productivity and accountability, and I’m <em>especially</em> interested in where all of these things intersect. I believe that mental health is more important than productivity just like I believe that people are more important than profit. And at the same time, I think it's a mistake to be so binary in our thinking. Why can't we want and obtain multiple things at the same time?</p>
+                    <p>If you’ve tried all the productivity apps and the producitiity hacks and they didn’t wondrously morph you into a productivity superhero... well I’m pretty inclined to think that the answer to all of our tech-related anxiety and procrastination problems ISN'T more tech... but instead is MORE HUMAN CONNECTION.</p>
                     <p>Of course, technically speaking, Remote Faces <em>is</em> tech. But there's a big difference between tech that tries to facilitate human connection and tech that tries to automate it.</p>
                 </div>
             </div>
@@ -66,6 +66,9 @@
                     </p>
                     <p>
                         <strong>March 24, 2020:</strong> Properly display whether people are online or not, and whether they are in this specific room or not. Any given can only be in one room at any time. Because this is trying to mimic working in an office, at a coffee shop, or at a library. You can only be in one of those places at a time.
+                    </p>
+                    <p>
+                        <strong>March 25, 2020:</strong> Create animated gif with gifshot if supported. Keep using still images as fallback if gif not supported. Also at least temporarily switch to saving every 60 seconds instead of every 10 seconds.
                     </p>
                 </div>
                 <h2 class="text-purple text-4xl mt-20 mb-4"><span class="bg-yellow">ROADMAP</span></h2>

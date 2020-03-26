@@ -23,20 +23,31 @@ export default {
     data: function(){
         return { 
             streaming: false,
-            workers: []
+            workers: [],
+            photosTaken: 0
         }
     },
     components: {
         RoomWorker
     },
     methods: {        
-        async updateProgressBar(){            
-            this.videoProgressPercentage = this.videoProgressPercentage + 1
-            this.$refs.progressBar.style.height = this.videoProgressPercentage + "%"
-
-            if(this.videoProgressPercentage < 100){
-                setTimeout(this.updateProgressBar, 100)
-            }            
+        async uploadPicture(still, gif){
+            this.photosTaken = this.photosTaken + 1
+            this.$axios.post('/updateImage',{
+                still: still,
+                gif: gif,
+                room_id: this.room_id
+            }).then((result) => {
+                if(result && result.data){
+                    this.workers = result.data
+                    if(this.photosTaken == 1){
+                        setTimeout(this.takePicture, 10000) //do it faster first time, cuz we only got still the first time
+                    }
+                    else{
+                        setTimeout(this.takePicture, 60000) //do it again a minute later
+                    }
+                }
+            })
         },
         async takePicture() {
             var canvas = this.$refs.canvas
@@ -44,15 +55,26 @@ export default {
             var context = canvas.getContext('2d');
             context.drawImage(video, 0, 0, 480, 320);
             var data = canvas.toDataURL('image/jpeg');
-            this.$axios.post('/updateImage',{
-                photo: data,
-                room_id: this.room_id
-            }).then((result) => {
-                if(result && result.data){
-                    this.workers = result.data
-                    setTimeout(this.takePicture, 10000)
-                }
-            })
+
+            if(this.photosTaken > 0 && gifshot.isWebCamGIFSupported()){
+                //pass both still and gif in. still for future gif production. gif for current display
+                var that = this
+                gifshot.createGIF({
+                    'gifWidth': 480,
+                    'gifHeight': 320,
+                    'interval': 0.25,
+                    'numFrame': 4,
+                    'keepCameraOn': true,
+                    'cameraStream': video.srcObject,
+                }, function(obj) {
+                    if(!obj.error) {
+                        that.uploadPicture(data, obj.image)
+                    }
+                });
+            }else{
+                this.uploadPicture(data, null)                
+            }
+            
         },
         async startStream(){
             
