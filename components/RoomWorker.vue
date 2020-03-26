@@ -22,7 +22,10 @@ export default {
         },
         isOnline: function() {
             var now = new Date()
-            var last_update = new Date(this.worker.updated_at + '+00:00')
+            var last_update = new Date(this.worker.updated_at.replace(' ','T') + '+00:00')
+            // console.log(now)
+            // console.log(last_update)
+            // console.log('---')
             var difference = Math.floor((now.getTime() - last_update.getTime()) / 1000)
             this.ago = difference
 
