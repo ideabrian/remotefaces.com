@@ -21,10 +21,9 @@ export default {
             return this.worker.file.amazon_url
         },
         isOnline: function() {
-            var now = Date.now()
-            var last_update = new Date(this.worker.updated_at)
-            last_update = last_update.getTime()
-            var difference = Math.floor((now - last_update) / 1000)
+            var now = new Date()
+            var last_update = new Date(this.worker.updated_at + '+00:00')
+            var difference = Math.floor((now.getTime() - last_update.getTime()) / 1000)
             this.ago = difference
 
             if(difference <= 60){
@@ -38,7 +37,7 @@ export default {
                 this.ago = Math.floor(difference / 86400) + 'd'
             }
 
-            if(difference > 66){ //pageview in last 66 seconds?
+            if(difference > 120){ //pageview in last 120 seconds
                 return false
             }else{
                 return true
