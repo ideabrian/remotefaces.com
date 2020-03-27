@@ -41,7 +41,7 @@
 export default {   
     middleware: 'member',     
     head: {
-      title: 'Create a New Virtual Coworking Room',
+      title: 'Create a New Room',
     },
     data: function(){
         return { 

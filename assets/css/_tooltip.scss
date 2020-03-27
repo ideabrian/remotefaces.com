@@ -18,7 +18,8 @@
     border-style: solid;
     position: absolute;
     margin: 5px;
-    background: theme('colors.teal.700');
+    border-color: theme('colors.teal.700');
+    background: transparent;
     z-index: 1;
   }
 

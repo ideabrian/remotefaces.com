@@ -1,6 +1,6 @@
 # Remote Faces
 
-> Virtual Coworking for Remote Workers, Solopreneurs, and Freelancers
+> Digital Togetherness for Internet Humans
 
 ## Build Setup
 

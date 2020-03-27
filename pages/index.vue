@@ -3,14 +3,21 @@
         <header class="bg-purple text-yellow pt-40 pb-32 md:pt-48 md:pb-40">
             <div class="container text-center">
                 <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-yellow-gold max-w-4xl mx-auto">
-                    Human Connection <br class="hidden md:block"/>While We Work From Home
+                    <!-- Human Connection <br class="hidden md:block"/>While We Work From Home -->
+                    <!-- Accountability Through Human Connection -->
+                    <!-- We Help Communities <br class="hidden md:block"/>Study Together -->
+                    <!-- Fitness Sessions for Your Online Community -->
+                    <!-- A Place for Communities <br class="hidden md:block"/>to Study Together -->
+                    <span v-html="useCases[useCaseIndex]"></span><br/>With Your People
                 </h1>
-                <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">
-                    Virtual coworking for remote teams, online communities, and solopreneurs. Trade in your loneliness for connection, accountability, motivation... and dancing.
+                <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">                    
+                    <!-- Virtual co-working, co-studying, and co-exercising. Because togetherness is cooler than loneliness. And getting stuff done is cooler than slacking off. -->
+                    <!-- Virtual coworking for remote teams, online communities, and solopreneurs. Trade in your loneliness for connection, accountability, motivation... and dancing.  -->
+                    A place for you and your audience to do stuff. Together. Because human connection increases accountability and happiness at the same time. It's science, I think.
                 </h2> 
 
                 <nuxt-link class="button" to="/rooms/new">Create a Room</nuxt-link>
-                <p>or join the demo room below</p>
+                <p>or join the demo coworking room below</p>
             </div>
         </header>
 
@@ -18,10 +25,10 @@
         <section class="mx-auto -mt-16 text-center container">
             <RoomWorkers ref="roomWorkersCom" :room_id="1"/>
         </section>
-
+<!-- 
 
         <section class="mt-40">
-            <div class="max-w-xl mx-auto container">
+            <div class="max-w-2xl mx-auto container">
                 <h2 class="text-purple text-4xl leading-tight">The first platform to focus on producitivty <strong>AND</strong> mental health.*</h2>
                 <span class="bg-yellow">* That might not actually be true, but it sounds cool 😁</span>
                 <div class="article mt-4">
@@ -31,10 +38,10 @@
                     <p>Of course, technically speaking, Remote Faces <em>is</em> tech. But there's a big difference between tech that tries to facilitate human connection and tech that tries to automate it.</p>
                 </div>
             </div>
-        </section>
-
+        </section> -->
+<!-- 
         <section class="mt-40">
-            <div class="max-w-xl mx-auto container">
+            <div class="max-w-2xl mx-auto container">
                 <h2 class="text-purple text-4xl leading-tight">Put a camera on yourself and watch your focus skyrocket.</h2>
                 <div class="article mt-4">
                     <p>I’ll write this section tomorrow</p>
@@ -43,13 +50,43 @@
         </section>
 
         <section class="mt-40">
-            <div class="max-w-xl mx-auto container">
+            <div class="max-w-2xl mx-auto container">
                 <h2 class="text-purple text-4xl leading-tight">But before you start working... what do you plan on accomplishing?</h2>
                 <div class="article mt-4">
                     <p>I’ll write this section tomorrow</p>
                 </div>
             </div>
         </section>
+
+        <section class="mt-40">
+            <div class="max-w-2xl mx-auto container">
+                <h2 class="text-purple text-4xl leading-tight">Get creepy insights... into yourself.</h2>
+                <div class="article mt-4">
+                    <p>I’ll write this section tomorrow</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-40 bg-purple-800 py-20 text-white">
+            <div class="max-w-5xl mx-auto container">
+                <h2 class="text-purple text-4xl leading-tight">Your Daily Recap</h2>
+                <div class="mt-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="col-span-1">
+                            <img src="https://remotefaces.s3.amazonaws.com/1-20200326190052.gif" alt="lorenzut Daily Recap"/>
+                        </div>
+                        <div class="col-span-1">
+                            <ul>
+                                <li class="p-2 mb-2 bg-yellow text-purple"><span class="opacity-50">2h 18m</span> (uncategorized)</li>
+                                <li class="p-2 mb-2 bg-yellow text-purple"><span class="opacity-50">45m</span> Add GIF support with still image fallback.</li>                                
+                                <li class="p-2 mb-2 bg-yellow text-purple"><span class="opacity-50">2h 18m</span> Talk with</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section> -->
 
         <section class="mt-40 py-20 -mb-40 bg-yellow-200">
             <div class="max-w-xl mx-auto container">    
@@ -104,21 +141,49 @@
 
 <script>
 import RoomWorkers from '~/components/RoomWorkers.vue';
-export default {        
+export default {      
+        data: function () {
+        return {
+            useCaseIndex: 0,
+            useCases: [
+                'Study Spanish',
+                'Work Remotely',
+                'Practice Ukulele',
+                'Write Words',
+                'Cook Dinner',
+                'Do Homework',
+                'Practice Yoga',
+                'Hit the Treadmill'
+            ]
+        };
+    },  
     head: {
-      title: 'Virtual Coworking for Remote Workers',
+      title: 'Digital Togetherness for Internet Humans',
     },
     computed: {
         days_old: function(){
             var now = new Date();
             var start = new Date('March 20, 2020');
             var difference = now - start;
-            var days_old = (difference / (1000*60*60*24))
+            var days_old = (difference / (1000*60*60*24)).toFixed(5)
             return days_old
         }
     },
+    methods:{
+      rotateUseCases(){
+        if(this.useCaseIndex == (this.useCases.length - 1)){
+          this.useCaseIndex = 0
+        }
+        else{
+          this.useCaseIndex += 1
+        }
+      }
+    },
     components: {
         RoomWorkers
+    },
+    mounted(){
+      setInterval(this.rotateUseCases, 1000);
     }
     //this.$gtag('event', 'your_event', { /* track something awesome */})
 }

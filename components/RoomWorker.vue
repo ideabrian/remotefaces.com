@@ -4,8 +4,8 @@
         
         <span class="absolute left-0 right-0 bottom-0 py-1 px-2 text-center"><span class="bg-yellow py-1 px-2">{{ worker.username }}</span></span>
         
-        <span class="absolute online-dot" v-if="isOnline"></span>
-        <span class="absolute online-status" v-else>{{ ago }} ago</span>
+        <!-- <span class="absolute online-dot" v-if="isOnline"></span>
+        <span class="absolute online-status" v-else>{{ ago }} ago</span> -->
     </div>    
 </template>
 <script>
@@ -21,6 +21,9 @@ export default {
             return this.worker.file.amazon_url
         },
         isOnline: function() {
+
+            return true; //todo put the below back
+
             var now = new Date()
             var last_update = new Date(this.worker.updated_at.replace(' ','T') + '+00:00')
             // console.log(now)

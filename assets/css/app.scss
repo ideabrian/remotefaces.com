@@ -141,13 +141,10 @@ button:disabled, button[disabled]{
 	}
 }
 
-#watch-me{
-	input{
-		background: transparent;
-		color: white;
-		width: 100%;
-		text-align: center;
-	}
+#videoStreamToggle{
+	position: absolute;	
+	top: 1.6rem;	
+	left: calc(50% - 39px);
 }
 
 @import 'article';

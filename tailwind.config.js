@@ -15,6 +15,9 @@ module.exports = {
                 default: '#333'
             },
             white: '#ffffff',
+            green: {
+                default: 'green'
+            },
             purple: {
                 default: '#541388' ,
                 100: '#EDE8F2',

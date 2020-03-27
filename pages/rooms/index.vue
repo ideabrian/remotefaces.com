@@ -3,7 +3,7 @@
         <header class="bg-purple text-yellow pt-40 pb-12 md:pt-48 ">
             <div class="container text-center">
                 <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-yellow-gold max-w-4xl mx-auto">
-                    My Coworking Rooms
+                    My Rooms
                 </h1>
             </div>
         </header>
@@ -30,7 +30,7 @@ export default {
         }
     }, 
     head: {
-      title: 'Virtual Coworking Rooms',
+      title: 'My Rooms',
     },
     components: {
 
