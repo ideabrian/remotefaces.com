@@ -30,9 +30,9 @@
                         <nuxt-link to="/rooms" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">my rooms</nuxt-link> 
                     </template>
                     <template v-else>
-                        <nuxt-link to="/" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">home</nuxt-link>                                            
+                        <!-- <nuxt-link to="/" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">home</nuxt-link>                                            
                         <nuxt-link to="/talk" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">talk</nuxt-link> 
-                         <nuxt-link to="/dance" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">dance</nuxt-link> 
+                         <nuxt-link to="/dance" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-6">dance</nuxt-link>  -->
                     </template>
                 </div>
                 <div v-if="$store.getters.isLoggedIn">                    
