@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-6xl mx-auto mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">                                                                                
+    <div class="max-w-md md:max-w-6xl mx-auto mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">                                                                                
         <canvas ref="canvas"  width="480" height="320" class="hidden"></canvas>
         <div class="col-span-1 relative" v-show="streaming">
             <video class="rounded" ref="yourVideo" style="border-radius:6px" width="480" height="320"></video>

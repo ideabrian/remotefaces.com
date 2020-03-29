@@ -141,6 +141,19 @@ button:disabled, button[disabled]{
 	&.online{
 		filter: none;
 	}
+	.worker-status{
+		height: 2.2rem;
+		overflow: hidden;
+		line-height: 2.25rem;
+		padding-top: 0;
+	}
+	&:hover{
+		.worker-status{
+			height: auto;
+			line-height: 1.25rem;
+			padding-top: .5rem;
+		}
+	}
 }
 
 #videoStreamToggle{

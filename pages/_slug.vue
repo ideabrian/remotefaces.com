@@ -26,6 +26,7 @@
             <section class="mx-auto -mt-16 text-center container">                            
                 <RoomWorkers ref="roomWorkersCom" :room_id="room.id"/>                     
             </section>
+ 
         </template>
     </div>
 </template>

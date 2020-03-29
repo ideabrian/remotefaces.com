@@ -8,12 +8,13 @@
                     <!-- We Help Communities <br class="hidden md:block"/>Study Together -->
                     <!-- Fitness Sessions for Your Online Community -->
                     <!-- A Place for Communities <br class="hidden md:block"/>to Study Together -->
-                    <span v-html="useCases[useCaseIndex]"></span><br/>With Your People
+                    <!-- <span v-html="useCases[useCaseIndex]"></span><br/>With Your People -->
+                    Human Connection <br class="hidden md:block"/>For Remote Workers
                 </h1>
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">                    
                     <!-- Virtual co-working, co-studying, and co-exercising. Because togetherness is cooler than loneliness. And getting stuff done is cooler than slacking off. -->
-                    <!-- Virtual coworking for remote teams, online communities, and solopreneurs. Trade in your loneliness for connection, accountability, motivation... and dancing.  -->
-                    A place for you and your audience to do stuff. Together. Because human connection increases accountability and happiness at the same time. It's science, I think.
+                    Virtual coworking for remote teams, online communities, and solopreneurs. Trade in your loneliness for connection, accountability, motivation... and happy hour.
+                    <!-- A place for you and your community to do stuff. Together. Because human connection increases accountability and happiness at the same time. It's science, I think. -->
                 </h2> 
 
                 <nuxt-link class="button" to="/rooms/new">Create a Room</nuxt-link>
