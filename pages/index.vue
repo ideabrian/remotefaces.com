@@ -13,7 +13,7 @@
                 </h1>
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">                    
                     <!-- Virtual co-working, co-studying, and co-exercising. Because togetherness is cooler than loneliness. And getting stuff done is cooler than slacking off. -->
-                    Virtual coworking for remote teams, online communities, and solopreneurs. Trade in your loneliness for connection, accountability, motivation... and happy hour.
+                    Virtual coworking for remote teams, online communities, and solopreneurs. Trade in your loneliness for connection, accountability... and occasional nose-picking.
                     <!-- A place for you and your community to do stuff. Together. Because human connection increases accountability and happiness at the same time. It's science, I think. -->
                 </h2> 
 
