@@ -162,6 +162,16 @@ button:disabled, button[disabled]{
 	left: calc(50% - 39px);
 }
 
+#header-background{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: -1;
+	background-size: cover;
+}
+
 @import 'article';
 @import "navigation";
 @import 'form';

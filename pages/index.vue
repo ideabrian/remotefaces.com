@@ -1,133 +1,36 @@
 <template>
-    <div>    
-        <header class="bg-purple text-yellow pt-40 pb-32 md:pt-48 md:pb-40">
+    <div>   
+        <header class="bg-purple text-yellow pt-40 lg:pt-56 pb-32 md:pt-48 md:pb-40 -mb-40">            
             <div class="container text-center">
-                <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-yellow-gold max-w-4xl mx-auto">
-                    <!-- Human Connection <br class="hidden md:block"/>While We Work From Home -->
-                    <!-- Accountability Through Human Connection -->
-                    <!-- We Help Communities <br class="hidden md:block"/>Study Together -->
-                    <!-- Fitness Sessions for Your Online Community -->
-                    <!-- A Place for Communities <br class="hidden md:block"/>to Study Together -->
-                    <!-- <span v-html="useCases[useCaseIndex]"></span><br/>With Your People -->
-                    Human Connection <br class="hidden md:block"/>For Remote Workers
-                </h1>
+                <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-yellow-gold max-w-2xl mx-auto">
+                    Create. Together.
+                </h1>               
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">                    
-                    <!-- Virtual co-working, co-studying, and co-exercising. Because togetherness is cooler than loneliness. And getting stuff done is cooler than slacking off. -->
-                    Virtual coworking for remote teams, online communities, and solopreneurs. Trade in your loneliness for connection, accountability... and occasional nose-picking.
-                    <!-- A place for you and your community to do stuff. Together. Because human connection increases accountability and happiness at the same time. It's science, I think. -->
+                    Are you an online creator who digs human connection? Choose an option below and we’ll knock your creative socks off. Unless your feet are cold.
                 </h2> 
-
-                <nuxt-link class="button" to="/rooms/new">Create a Room</nuxt-link>
-                <p class="leading-snug">or join the people below doing... <br class="hidden md:block"/>whatever they're doing</p>
-            </div>
-        </header>
-
-
-        <section class="mx-auto -mt-16 text-center container">
-            <RoomWorkers ref="roomWorkersCom" :room_id="1"/>
-        </section>
-<!-- 
-        <section class="mt-40">
-            <div class="container max-w-3xl">
-                <h2 class="text-4xl font-bold leading-snug">How’s it work?</h2>
-                <p>Pre-requisitie definitions.</p>
-                <p>Room = the place that your audience members can access 24/7. eg Awesome Sauce Music Collective</p>
-                <p>Sessions = the individual sessions WITHIN a room where you do things together for a set period of time. eg Practice Guitar for 60 Minutes</p>
-                <p>Okay now let's dive in.</p>
-                <p></p>
-            </div>
-        </section>
-
-        <section class="mt-40">
-            <div class="container max-w-6xl">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="col-span-1">
-                        <h2 class="text-4xl font-bold leading-snug">Get to know the people who care about you.</h2>
-                        <p>You can’t fake connection. </p>
-                    </div>
-                    <div class="col-span-1">
-                        <span style="font-family: 'Gloria Hallelujah', cursive;">try it</span>
-                    </div>
-                </div>                
-            </div>
-        </section>
-        <section class="mt-40">
-            <div class="container max-w-6xl">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="col-span-1">
-                        <h2 class="text-4xl font-bold leading-snug">without giving them a headache.</h2>
-                        <p>You can’t fake connection. </p>
-                    </div>
-                    <div class="col-span-1">
-                        <span style="font-family: 'Gloria Hallelujah', cursive;">try it</span>
-                    </div>
-                </div>                
-            </div>
-        </section> -->
-<!-- 
-
-        <section class="mt-40">
-            <div class="max-w-2xl mx-auto container">
-                <h2 class="text-purple text-4xl leading-tight">The first platform to focus on producitivty <strong>AND</strong> mental health.*</h2>
-                <span class="bg-yellow">* That might not actually be true, but it sounds cool 😁</span>
-                <div class="article mt-4">
-                    <p>I built Remote Faces because I get lonely really easily. When I'm lonely I get the blues, and when I get the blues I stare at my screen instead of doing real work. Which makes me feel like shit about myself, thereby furthering my depressed procrastination.</p>
-                    <p>I'm passionate about mental health even more than I am about productivity and accountability, and I’m <em>especially</em> interested in where all of these things intersect. I believe that mental health is more important than productivity just like I believe that people are more important than profit. And at the same time, I think it's a mistake to be so binary in our thinking. Why can't we want and obtain multiple things at the same time?</p>
-                    <p>If you’ve tried all the productivity apps and they didn’t wondrously morph you into a productivity superhero... well I’m pretty inclined to think that the answer to all of our tech-related anxiety and procrastination problems ISN'T more tech... but instead is MORE HUMAN CONNECTION.</p>
-                    <p>Of course, technically speaking, Remote Faces <em>is</em> tech. But there's a big difference between tech that tries to facilitate human connection and tech that tries to automate it.</p>
+                <div class="mt-40 max-w-md md:max-w-6xl mx-auto mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-black"> 
+                    <nuxt-link to="/influencers" class="col-span-1 relative bg-purple-200 py-6 px-10 text-xl hover:bg-yellow-200" style="border-radius:6px">
+                        <h3 class="font-bold mb-4 text-purple text-2xl">For <span class="underline" v-tooltip="'Yeah, I know, I hate this word too.'">"Influencers"</span></h3>
+                        <p>Get intimate with your followers by creating alongside them. And get paid doing it.</p>
+                    </nuxt-link> 
+                    <nuxt-link to="/teams" class="col-span-1 relative bg-purple-200 py-6 px-10 text-xl hover:bg-yellow-200" style="border-radius:6px">
+                        <h3 class="font-bold mb-4 text-purple text-2xl">For Remote Teams</h3>
+                        <p>Trade in loneliness for camaraderie... and the chance to see your boss pick their nose.</p>
+                    </nuxt-link> 
+                    <nuxt-link to="/communities" class="col-span-1 relative bg-purple-200 py-6 px-10 text-xl hover:bg-yellow-200" style="border-radius:6px">
+                        <h3 class="font-bold mb-4 text-purple text-2xl">For Communities</h3>
+                        <p>Creating is hard when twitter is always a click away. So... add some accountability to your life.</p>
+                    </nuxt-link> 
                 </div>
-            </div>
-        </section> -->
-<!-- 
-        <section class="mt-40">
-            <div class="max-w-2xl mx-auto container">
-                <h2 class="text-purple text-4xl leading-tight">Put a camera on yourself and watch your focus skyrocket.</h2>
-                <div class="article mt-4">
-                    <p>I’ll write this section tomorrow</p>
-                </div>
-            </div>
-        </section>
 
-        <section class="mt-40">
-            <div class="max-w-2xl mx-auto container">
-                <h2 class="text-purple text-4xl leading-tight">But before you start working... what do you plan on accomplishing?</h2>
-                <div class="article mt-4">
-                    <p>I’ll write this section tomorrow</p>
+                <div class="mt-56 mb-20">
+                    Nothing to see here. Choose an option above!
+                    <div class="mt-4 text-3xl text-white font-bold">;)</div>
                 </div>
-            </div>
-        </section>
 
-        <section class="mt-40">
-            <div class="max-w-2xl mx-auto container">
-                <h2 class="text-purple text-4xl leading-tight">Get creepy insights... into yourself.</h2>
-                <div class="article mt-4">
-                    <p>I’ll write this section tomorrow</p>
-                </div>
             </div>
-        </section>
-
-        <section class="mt-40 bg-purple-800 py-20 text-white">
-            <div class="max-w-5xl mx-auto container">
-                <h2 class="text-purple text-4xl leading-tight">Your Daily Recap</h2>
-                <div class="mt-4">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="col-span-1">
-                            <img src="https://remotefaces.s3.amazonaws.com/1-20200326190052.gif" alt="lorenzut Daily Recap"/>
-                        </div>
-                        <div class="col-span-1">
-                            <ul>
-                                <li class="p-2 mb-2 bg-yellow text-purple"><span class="opacity-50">2h 18m</span> (uncategorized)</li>
-                                <li class="p-2 mb-2 bg-yellow text-purple"><span class="opacity-50">45m</span> Add GIF support with still image fallback.</li>                                
-                                <li class="p-2 mb-2 bg-yellow text-purple"><span class="opacity-50">2h 18m</span> Talk with</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section> -->
-
-        <section class="mt-40 py-20 -mb-40 bg-yellow-200">
+        </header>  
+        <section class="py-20 -mb-40 bg-yellow-200 hidden">
             <div class="max-w-xl mx-auto container">    
 
                 <p class="mb-20"><em>Remote Faces was an idea that <a class="link" href="https://lorenzut.com" target="_blank">this guy</a> had on March 20th. It's coming along nicely, but please keep in mind that it's only {{ days_old }} days old. Or in other words: please <a href="https://www.pbh2.com/wordpress/wp-content/uploads/2013/07/Bear-GIFS-dancing.gif" target="_blank">bear</a> with me! And if you’d like to do more than just <a href="https://www.pbh2.com/wordpress/wp-content/uploads/2013/07/Bear-GIFS-dancing.gif" target="_blank">bear</a> with me, please please please <a href="https://calendly.com/lorenzut/30min" target="_blank" class="link">setup a 30 minute call with me</a>. You can also follow progress below!</em></p>
@@ -184,24 +87,9 @@
 
 <script>
 import RoomWorkers from '~/components/RoomWorkers.vue';
-export default {      
-        data: function () {
-        return {
-            useCaseIndex: 0,
-            useCases: [
-                'Study Spanish',
-                'Work Remotely',
-                'Practice Ukulele',
-                'Write Words',
-                'Cook Dinner',
-                'Do Homework',
-                'Practice Yoga',
-                'Hit the Treadmill'
-            ]
-        };
-    },  
+export default {       
     head: {
-      title: 'Digital Togetherness for Internet Humans',
+      title: 'Create. Together.',
     },
     computed: {
         days_old: function(){
@@ -211,23 +99,10 @@ export default {
             var days_old = (difference / (1000*60*60*24)).toFixed(5)
             return days_old
         }
-    },
-    methods:{
-      rotateUseCases(){
-        if(this.useCaseIndex == (this.useCases.length - 1)){
-          this.useCaseIndex = 0
-        }
-        else{
-          this.useCaseIndex += 1
-        }
-      }
-    },
+    },    
     components: {
         RoomWorkers
-    },
-    mounted(){
-      setInterval(this.rotateUseCases, 1000);
-    }
+    },    
     //this.$gtag('event', 'your_event', { /* track something awesome */})
 }
 </script>

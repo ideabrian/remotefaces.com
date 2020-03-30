@@ -12,7 +12,7 @@
 	&.open{
 		background: theme('colors.pink.default');
     }
-    #main-links .nuxt-link-exact-active{
+    #main-links > .nuxt-link-exact-active{
         border-bottom: 2px solid;
     }
 }
@@ -50,6 +50,20 @@ footer{
         opacity: .35;
         &.active{
             opacity: 1;
+        }
+    }
+}
+
+
+.has-dropdown{
+    > div{
+        left: -9999px;
+        top: 0px;
+        padding-top: 30px;
+    }
+    &:hover{
+        > div{
+            left: 0;
         }
     }
 }

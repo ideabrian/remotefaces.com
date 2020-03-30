@@ -24,7 +24,7 @@ export default {
     ]
   },
   env: {
-    appName: 'Digital Togetherness for Internet Humans',
+    appName: 'Create. Together.',
     baseUrl: process.env.BASE_URL,
     baseApiUrl: process.env.API_BASE_URL,
     tokenName: 'satellizer_token',

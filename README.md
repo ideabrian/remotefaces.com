@@ -1,6 +1,6 @@
 # Remote Faces
 
-> Digital Togetherness for Internet Humans
+> Create. Together.
 
 ## Build Setup
 

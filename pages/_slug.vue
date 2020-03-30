@@ -35,7 +35,7 @@
 import RoomWorkers from '~/components/RoomWorkers.vue'
 export default {        
     head: {
-      title: 'Digital Togetherness for Internet Humans',
+      title: 'Create. Together.',
     },
     data: function(){
         return { 
