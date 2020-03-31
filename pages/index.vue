@@ -6,18 +6,21 @@
                     Create. Together.
                 </h1>               
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">                    
-                    Are you an online creator who digs human connection? Choose an option below and we’ll knock your creative socks off. Unless your feet are cold.
+                    <em>Remote Faces</em> is a <span class="text-yellow">virtual coworking platform</span> for online creators who dig human connection. <span class="text-purple-200 text-xl lg:text-2xl block mt-2 opacity-50">#loneliness &nbsp; #mentalhealth &nbsp; #accountability</span>
                 </h2> 
                 <div class="mt-40 max-w-md md:max-w-6xl mx-auto mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-black"> 
                     <nuxt-link to="/influencers" class="col-span-1 relative bg-purple-200 py-6 px-10 text-xl hover:bg-yellow-200" style="border-radius:6px">
-                        <h3 class="font-bold mb-4 text-purple text-2xl">For <span class="underline" v-tooltip="'Yeah, I know, I hate this word too.'">"Influencers"</span></h3>
+                        <span class="bg-yellow block mb-4">Cowork with Your Audience</span>
+                        <h3 class="font-bold mb-4 text-purple text-2xl">For <span class="underline" v-tooltip="'Yeah, I know, I hate this word too.'">"Influencers"</span></h3>                        
                         <p>Get intimate with your followers by creating alongside them. And get paid doing it.</p>
                     </nuxt-link> 
                     <nuxt-link to="/teams" class="col-span-1 relative bg-purple-200 py-6 px-10 text-xl hover:bg-yellow-200" style="border-radius:6px">
+                        <span class="bg-yellow block mb-4">Cowork with Your Team</span>
                         <h3 class="font-bold mb-4 text-purple text-2xl">For Remote Teams</h3>
                         <p>Trade in loneliness for camaraderie... and the chance to see your boss pick their nose.</p>
                     </nuxt-link> 
                     <nuxt-link to="/communities" class="col-span-1 relative bg-purple-200 py-6 px-10 text-xl hover:bg-yellow-200" style="border-radius:6px">
+                        <span class="bg-yellow block mb-4">Cowork with Your Peers</span>
                         <h3 class="font-bold mb-4 text-purple text-2xl">For Communities</h3>
                         <p>Creating is hard when twitter is always a click away. So... add some accountability to your life.</p>
                     </nuxt-link> 
@@ -89,7 +92,7 @@
 import RoomWorkers from '~/components/RoomWorkers.vue';
 export default {       
     head: {
-      title: 'Create. Together.',
+      title: 'Virtual Coworking for Online Creators',
     },
     computed: {
         days_old: function(){

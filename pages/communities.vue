@@ -11,7 +11,7 @@
                     It’s hard to stay focused in this internet age. So we built a place for you and your community to create. Together. Because human connection increases accountability according to a buzzfeed article I read one time.
                 </h2> 
 
-                <nuxt-link to="/rooms/new" class="button">Get Started</nuxt-link>
+                <nuxt-link to="/rooms/new" class="button">Create an Office</nuxt-link>
                 <p class="leading-snug">or read on</p>
                                     
             </div>

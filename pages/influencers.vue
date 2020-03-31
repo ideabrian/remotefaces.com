@@ -1,25 +1,21 @@
 <template>
     <div>
-        <header class="bg-purple text-yellow pt-40 pb-32 md:pt-48 md:pb-40 relative z-10">
+        <header class="bg-purple text-yellow pt-40 lg:pt-56 pb-32 md:pt-48 md:pb-40 relative z-10">
              <div id="header-background" style="opacity:0.2;background-image:url(https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60);"></div>
 
             <div class="container text-center">
                 <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-yellow-gold max-w-4xl mx-auto">
                     <!-- Get Paid to Create Alongside Your Patrons -->
-                    Give Your Patrons <br class="hidden lg:block"/>Motivation, Accountability, and a Sense of Belonging
+                    Give Your Audience <br class="hidden lg:block"/>Motivation, Accountability, and a Sense of Belonging
                 </h1>               
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-purple-200 mx-auto mt-12">                    
                     Let your most dedicated fans pay to support you, and thank them with something <em class="text-yellow">way freaking cooler than exclusive content</em>. <strong>Without doing any extra work.</strong>
                 </h2> 
-                <nuxt-link to="/rooms/new" class="button">Get Started</nuxt-link>
+                <nuxt-link to="/rooms/new" class="button">Create an Office</nuxt-link>
                 <p class="leading-snug">or read on</p>
                                     
             </div>
         </header>
-
-         <section class="mx-auto -mt-16 text-center container z-20 relative">                            
-            <RoomWorkers ref="roomWorkersCom" :room_id="'1'"/>                     
-        </section>
 
         <section class="container max-w-xl mt-56 mb-56">
             <h2 class="font-bold text-2xl mb-4">Here’s how it works.</h2>

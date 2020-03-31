@@ -11,7 +11,7 @@
                    Most likely this tool won’t 400x your productivity. But I bet it’ll make you smile. Need to justify the cost of smiles to accounting? Just say "employee retention".
                 </h2> 
 
-                <nuxt-link to="/rooms/new" class="button">Get Started</nuxt-link>
+                <nuxt-link to="/rooms/new" class="button">Create an Office</nuxt-link>
                 <p class="leading-snug">or read on</p>
                                     
             </div>
