@@ -5,7 +5,8 @@
             <div class="container text-center">
                 <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-yellow-gold max-w-3xl mx-auto">
                     <!-- Virtual Co<span v-html="useCases[useCaseIndex]"></span> <br/>for Online Communities -->
-                    Create Accountability With Your Community
+                    <!-- Create Accountability With Your Community -->
+                    Cowork Remotely <br class="hidden md:block"/>with Your Peers
                 </h1>               
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-4xl text-purple-200 mx-auto mt-12">                    
                     It’s hard to stay focused in this internet age. So we built a place for you and your community to create. Together. Because human connection increases accountability according to a buzzfeed article I read one time.

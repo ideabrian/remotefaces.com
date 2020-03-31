@@ -4,7 +4,8 @@
             <div id="header-background" style="opacity:0.1;background-image:url(https://images.unsplash.com/photo-1475506631979-72412c606f4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60);"></div>
             <div class="container text-center">
                 <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-yellow-gold max-w-3xl mx-auto">
-                    Human Connection <br class="hidden md:block"/>for Remote Teams
+                    <!-- Human Connection <br class="hidden md:block"/>for Remote Teams -->
+                    Cowork Remotely <br class="hidden md:block"/>with Your Team
                 </h1>               
                 <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-purple-200 mx-auto mt-12">                    
                    <!-- Are you working remotely? Or remotely working? Well, either way, inject a little office antics back into your life. -->

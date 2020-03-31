@@ -31,13 +31,13 @@
                     </template>
                     <template v-else>
                         <div class="hidden lg:inline-block has-dropdown">
-                            <span class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-8"><i class="fa fa-chevron-down text-sm opacity-25"></i> epic sales pitch</span>
+                            <span class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-8"><i class="fa fa-chevron-down text-sm opacity-25"></i> cowork</span>
 
                             <div class="inline-block absolute">
                                 <div class="bg-purple-800 py-3 px-6">
-                                    <nuxt-link to="/influencers" class="block hover:text-white">for influencers</nuxt-link>
-                                    <nuxt-link to="/teams" class="block hover:text-white mt-2">for remote teams</nuxt-link>
-                                    <nuxt-link to="/communities" class="block hover:text-white mt-2">for communities</nuxt-link>
+                                    <nuxt-link to="/influencers" class="block hover:text-white">with your audience</nuxt-link>
+                                    <nuxt-link to="/teams" class="block hover:text-white mt-2">with your team</nuxt-link>
+                                    <nuxt-link to="/communities" class="block hover:text-white mt-2">with your peers</nuxt-link>
                                 </div>
                             </div> 
                         </div>

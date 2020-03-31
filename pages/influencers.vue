@@ -5,11 +5,13 @@
 
             <div class="container text-center">
                 <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-yellow-gold max-w-4xl mx-auto">
+                    Cowork Remotely <br class="hidden md:block"/>with Your Audience
                     <!-- Get Paid to Create Alongside Your Patrons -->
-                    Give Your Audience <br class="hidden lg:block"/>Motivation, Accountability, and a Sense of Belonging
+                    <!-- Give Your Audience <br class="hidden lg:block"/>Motivation, Accountability, and a Sense of Belonging -->
                 </h1>               
-                <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-purple-200 mx-auto mt-12">                    
-                    Let your most dedicated fans pay to support you, and thank them with something <em class="text-yellow">way freaking cooler than exclusive content</em>. <strong>Without doing any extra work.</strong>
+                <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-purple-200 mx-auto mt-12">        
+                    Let your fans pay to support you. And thank them with something <em class="text-yellow">way freaking cooler than exclusive content</em>. Thank them motivation, accountability, and a sense of belonging. <strong>Without doing any extra work.</strong>
+                    <!-- Let your most dedicated fans pay to support you, and thank them with something <em class="text-yellow">way freaking cooler than exclusive content</em>. <strong>Without doing any extra work.</strong> -->
                 </h2> 
                 <nuxt-link to="/rooms/new" class="button">Create an Office</nuxt-link>
                 <p class="leading-snug">or read on</p>
