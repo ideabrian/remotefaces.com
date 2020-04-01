@@ -27,7 +27,22 @@
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto text-center lg:text-left text-lg lg:text-base" :class="{hidden: isHidden}">
                 <div class="lg:flex-grow relative" id="main-links">
                     <template v-if="$store.getters.isLoggedIn">
-                        <nuxt-link to="/rooms" class="block mt-8 lg:inline-block lg:mt-0 hover:text-white">my rooms</nuxt-link> 
+                         
+                        <nuxt-link to="/rooms" class="block lg:hidden hover:text-white">my rooms</nuxt-link> 
+                        <div class="hidden lg:inline-block has-dropdown">
+                            <span class="block mt-8 lg:inline-block lg:mt-0 hover:text-white lg:mr-8"><i class="fa fa-chevron-down text-sm opacity-25"></i> my rooms</span>
+
+                            <div class="inline-block absolute">
+                                <div class="bg-purple-800 py-3 px-6">                                
+                                    <template v-if="$store.getters.memberProfile.rooms">
+                                        <nuxt-link v-for="room in $store.getters.memberProfile.rooms" :key="room.id" :to="'/' + room.slug" class="block hover:text-white mt-2">{{ room.name }}</nuxt-link>
+                                    </template>
+                                    <nuxt-link to="/rooms/new" class="block text-teal hover:text-white mt-2">+ Create New Room</nuxt-link>
+                                </div>
+                            </div> 
+                        </div>
+
+
                     </template>
                     <template v-else>
                         <div class="hidden lg:inline-block has-dropdown">
@@ -82,6 +97,6 @@
             stopStreaming(){
                 this.isStreaming = false
             }
-        },
+        }
     }
 </script>

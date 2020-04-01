@@ -71,6 +71,7 @@ export default {
                     privacy: this.privacy,
                 }).then((result) => {
                     if(result.data){
+                        this.$store.dispatch('addUserRoom', result.data)
                         this.$router.push('/' + result.data.slug)    
                     }      
                 })          

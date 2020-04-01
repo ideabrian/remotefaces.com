@@ -1,18 +1,24 @@
 export const state = () => ({
     _currentUser: null,
     _token: null,
-    toast: null    
+    toast: null 
 })
 
 export const mutations = {
     UPDATE_USER_AVAILABILITY: function (state, availability) {
         state.auth.user.is_available_to_listen = availability
     },
+    ADD_USER_ROOM: function (state, room) {
+        state.auth.user.rooms.push(room)
+    },
 }
 
 export const actions = {
     async updateUserAvailability(context, availability){
         context.commit('UPDATE_USER_AVAILABILITY', availability)
+    },
+    async addUserRoom(context, room){
+        context.commit('ADD_USER_ROOM', room)
     }
 }
 
