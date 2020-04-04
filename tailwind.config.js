@@ -10,6 +10,10 @@ module.exports = {
             center: true,
             padding: '2rem',
         },
+        fontFamily: {
+            default: ['Glacial Indifference', 'sans-serif'],
+            hand: ['Gloria Hallelujah', 'sans-serif']
+        },
         colors: {
             black:{
                 default: '#333'
