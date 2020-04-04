@@ -118,10 +118,33 @@
             </div>
             <div class="mt-40 max-w-xl mx-auto">  
                 <h2 class="font-bold text-2xl sm:text-3xl md:text-3xl lg:text-4xl leading-none">
-                    Questions?
+                    Feedback?
                 </h2>              
                 <div class="article mt-10 text-2xl">
-                    <p>Drop us (<a href="mailto:patrick@lorenzut.com">Patrick</a> or <a href="mailto:janis@learninseconds.com">Janis</a>) an email. We are doing this thing in lean agile fashion - you’re feedback will influence a lot how we move forward. 👍🏼🙌🏻</p>
+                    <p>We started this project {{ days_old }} days ago and are building in lean fashion. Which means that feedback from people like you will wildly shape the future of Remote Faces. So if you have an idea, or a concern, or just want to say "sup", send an email to Patrick and/or Janis. Seriously, we want to hear from you, and will not reply with an automated robot.</p>
+                    <p><span class="link" @click="showEmails">show email addresses</span></p>
+                    <p>
+                        <span v-html="patrickEmail"></span><br/>
+                        <span v-html="janisEmail"></span>
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="mt-40 max-w-xl mx-auto">  
+                <h2 class="font-bold text-2xl sm:text-3xl md:text-3xl lg:text-4xl leading-none">
+                    Want Updates?
+                </h2>    
+                <div class="article mt-10 text-2xl">
+                    <p>Drop your email below and we’ll send you (super rare) updates about how things are progressing, including new features, new markets, new ways to change lives and make cash monies, etc. And maybe discounts 🤫. No spam ever. Unsubscribe anytime.</p>
+                </div>          
+                <form class="form relative" v-if="subscribed">
+                    <input class="input" type="email" v-validate="'required|email'" name="email" v-model="email"  placeholder="alex@doe.com"/>
+                    <input class="input hidden" type="text" name="name" v-model="name" required/>
+                    <button class="button is-small newsletter-button" @click.prevent="subscribeToNewsletter" native-type="submit" :disabled="subscriptionSending">Go</button>
+                </form>
+                <div v-else class="article">
+                    <p>Thanks :)</p>
+                    <p>Now, last step, could you please click the confirmation link in the email that our robot just sent you? In a twist of irony, this is done to prevent robots from signing up. 🤷‍♀️</p>
                 </div>
             </div>
 
@@ -144,7 +167,50 @@ export default {
             var days_old = (difference / (1000*60*60*24)).toFixed(5)
             return days_old
         }
-    },   
+    },  
+    data: function(){
+        return {
+            patrickEmail: '',
+            janisEmail: '',
+            email: '',
+            name: '',
+            subscriptionSending: false,
+            subscribed: false
+        }
+    },
+    methods: {
+
+        showEmails(){
+            this.patrickEmail = '<a class="link" href="mailto:patrick@lorenzut.com" target="_blank">patrick@lorenzut.com</a>'
+            this.janisEmail = '<a class="link" href="mailto:janis@learninseconds.com" target="_blank">janis@learninseconds.com</a>'
+        },
+
+        subscribeToNewsletter(){
+            this.subscriptionSending = true
+            this.$validator.validate('email').then((result) => {
+                if (result) {
+                    this.$axios.post('/newsletter/subscribe',{
+                        email: this.email,
+                        name: this.name
+                    }).then((result) => {
+                        if(result.data && result.data.success){
+                            this.email = ''
+                            this.subscribed = true
+
+                        }else{
+                            
+                        }
+                    }) 
+                }
+            })
+        },
+        setName(){
+            this.name = 742
+        }
+    },
+    mounted(){
+        setTimeout(this.setName(), 1500);
+    } 
     //this.$gtag('event', 'your_event', { /* track something awesome */})
 }
 </script>
