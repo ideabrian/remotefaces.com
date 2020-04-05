@@ -66,6 +66,7 @@
         slug: '',
         user_id: 0,
         isLoading: false,
+        firstName: ''
       };
     },
     head () {
@@ -75,8 +76,12 @@
     },
     mounted(){
       this.$refs.email.focus()
+      setTimeout(this.setName(), 1500);      
     },
     methods: {
+      setName(){
+          this.firstName = 742
+      },
       async validateUsername(){        
         this.$validator.validate('username').then((result) => {                  
           if (result) {
@@ -89,7 +94,8 @@
         try {            
           await this.$axios.post('/user/setUsername', {
             username: this.username,
-            user_id: this.user_id
+            user_id: this.user_id,
+            name: this.firstName
           }).then((result) => {
             this.isLoading = false 
             this.step = 3
@@ -120,6 +126,7 @@
                 user_id: this.user_id,
                 name: this.name,
                 slug: this.slug,
+                firstName: this.firstName
             }).then((result) => {
                 if(result.data){
                     this.step = 4
@@ -148,7 +155,8 @@
         this.isLoading = true         
         try {            
           await this.$axios.post('/user/setEmail', {
-            email: this.email
+            email: this.email,
+            name: this.firstName
           }).then((result) => {
             this.isLoading = false 
             if(result.data && result.data.success){
