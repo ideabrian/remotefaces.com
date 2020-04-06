@@ -137,7 +137,7 @@
                 <div class="article mt-10 text-2xl">
                     <p>Drop your email below and we’ll send you (super rare) updates about how things are progressing, including new features, new markets, new ways to change lives and make cash monies, etc. And maybe discounts 🤫. No spam ever. Unsubscribe anytime.</p>
                 </div>          
-                <form class="form relative" v-if="subscribed">
+                <form class="form relative" v-if="!subscribed">
                     <input class="input" type="email" v-validate="'required|email'" name="email" v-model="email"  placeholder="alex@doe.com"/>
                     <input class="input hidden" type="text" name="name" v-model="name" required/>
                     <button class="button is-small newsletter-button" @click.prevent="subscribeToNewsletter" native-type="submit" :disabled="subscriptionSending">Go</button>
