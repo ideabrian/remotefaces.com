@@ -69,7 +69,22 @@ export default {
     '@nuxtjs/auth',
     'nuxt-validate',
     '@nuxtjs/toast',
-    '@nuxtjs/google-gtag'
+    '@nuxtjs/google-gtag',
+    '@nuxtjs/redirect-module'
+  ],
+  redirect: [
+    { from: '^/ih', to: 'https://ih.remotefaces.com', statusCode: 301 },
+    { from: '^/mhm', to: 'https://mhm.remotefaces.com', statusCode: 301 },
+    { from: '^/learninseconds', to: 'https://learninseconds.remotefaces.com', statusCode: 301 },
+    { from: '^/lsdpeople', to: 'https://lsdpeople.remotefaces.com', statusCode: 301 },
+    { from: '^/flybridge', to: 'https://flybridge.remotefaces.com', statusCode: 301 },
+    { from: '^/commsor', to: 'https://commsor.remotefaces.com', statusCode: 301 },
+    { from: '^/commchat', to: 'https://commchat.remotefaces.com', statusCode: 301 },
+    { from: '^/anaplan', to: 'https://anaplan.remotefaces.com', statusCode: 301 },
+    { from: '^/radu', to: 'https://radu.remotefaces.com', statusCode: 301 },
+    { from: '^/onzo', to: 'https://onzo.remotefaces.com', statusCode: 301 },
+    { from: '^/emmacreative', to: 'https://emmacreative.remotefaces.com', statusCode: 301 },
+    { from: '^/jason', to: 'https://jason.remotefaces.com', statusCode: 301 }
   ],
   'google-gtag': {
     id: 'UA-161763732-1',
