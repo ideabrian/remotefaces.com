@@ -2,8 +2,11 @@
     a{
         @extend .link;
     }
-    p, h2, h3, h4{
+    p, h2, h3, h4, ul, ol{
         margin-bottom: 1.4em;
+    }
+    ul, ol{
+        margin-left: 1.5em;
     }
     h2, h3, h4{
         font-weight: 600;

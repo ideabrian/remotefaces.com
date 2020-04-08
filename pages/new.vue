@@ -6,43 +6,48 @@
     <section  class="max-w-md mx-auto bg-white p-8">      
 
       <div v-show="step == 1" class="mt-40">      
-        
-        <div class="field">
-          <label class="label mt-10 mb-2 text-sm">What’s Your Email Address?</label>
-          <input class="input" type="email" ref="email" v-model="email" name="email" v-validate="'required|email'" placeholder="alex@doe.com"/>
-          <span class="mt-1 help is-danger">{{ errors.first('email') }}</span>
-        </div>
-        
-        <div class="field" v-if="email">
-          <button class="button is-small mt-2" @click.prevent="validateEmail" :disabled="isLoading">Submit</button>
-        </div>      
+        <form>
+          <div class="field">
+            <label class="label mt-10 mb-2 text-sm">What’s Your Email Address?</label>
+            <input class="input" type="email" ref="email" v-model="email" name="email" v-validate="'required|email'" placeholder="alex@doe.com"/>
+            <span class="mt-1 help is-danger">{{ errors.first('email') }}</span>
+          </div>
+          
+          <div class="field" v-if="email">
+            <button class="button is-small mt-2" native-type="submit" @click.prevent="validateEmail" :disabled="isLoading">Submit</button>
+          </div>   
+        </form>   
       </div>
       <div v-show="step == 2" class="mt-40">
-        <div class="field">
-          <label class="label mt-10 mb-2 text-sm">Please Choose a Username</label>
-          <input class="input" type="text" v-model="username" name="username" v-validate="'required|alpha_dash|max:15'" placeholder="groovysauce"/>
-          <span class="mt-1 help is-danger">{{ errors.first('username') }}</span>                
-        </div> 
+        <form>
+          <div class="field">
+            <label class="label mt-10 mb-2 text-sm">Please Choose a Username</label>
+            <input class="input" type="text" ref="username" v-model="username" name="username" v-validate="'required|alpha_dash|max:15'" placeholder="groovysauce"/>
+            <span class="mt-1 help is-danger">{{ errors.first('username') }}</span>                
+          </div> 
 
-        <div class="field" v-if="username">
-          <button class="button is-small mt-2" @click.prevent="validateUsername" :disabled="isLoading">Submit</button>
-        </div>
+          <div class="field" v-if="username">
+            <button class="button is-small mt-2" native-type="submit" @click.prevent="validateUsername" :disabled="isLoading">Submit</button>
+          </div>
+        </form>
       </div>
       <div v-show="step == 3" class="mt-40">
-        <div class="field">
-            <label class="label mt-10 mb-1 text-sm">Room Name</label>
-            <input v-model="name" v-validate="'required|max:50'" spellcheck="false" type="text" name="name" placeholder="name" class="input">                  
-            <span class="help is-danger">{{ errors.first('name') }}</span>
-        </div>
-        <div class="field">
-            <label class="label mt-4 mb-1 text-sm">Room Slug</label>                  
-            <input v-model="slug" v-validate="'required|alpha_dash|max:15'" spellcheck="false" type="text" name="slug" placeholder="slug" class="input mb-2">                  
-            <span class="help is-danger">{{ errors.first('slug') }}</span>
-            <p class="text-sm">Find your room at <strong>{{ slug ? slug : 'SLUG' }}.remotefaces.com</strong></p>
-        </div>
-        <div class="field">
-          <button class="button is-small mt-4" @click.prevent="validateRoom" :disabled="isLoading">Submit</button>
-        </div>
+        <form>
+          <div class="field">
+              <label class="label mt-10 mb-1 text-sm">Room Name</label>
+              <input ref="roomname" v-model="name" v-validate="'required|max:50'" spellcheck="false" type="text" name="name" placeholder="name" class="input">                  
+              <span class="help is-danger">{{ errors.first('name') }}</span>
+          </div>
+          <div class="field">
+              <label class="label mt-4 mb-1 text-sm">Room Slug</label>                  
+              <input v-model="slug" v-validate="'required|alpha_dash|max:15'" spellcheck="false" type="text" name="slug" placeholder="slug" class="input mb-2">                  
+              <span class="help is-danger">{{ errors.first('slug') }}</span>
+              <p class="text-sm">Find your room at <strong>{{ slug ? slug : 'SLUG' }}.remotefaces.com</strong></p>
+          </div>
+          <div class="field">
+            <button class="button is-small mt-4" native-type="submit" @click.prevent="validateRoom" :disabled="isLoading">Submit</button>
+          </div>
+        </form>
       </div>
       <div v-show="step == 4" class="mt-40">
         Tight! An email has been sent to you with a link to your new room!!!
@@ -99,6 +104,7 @@
           }).then((result) => {
             this.isLoading = false 
             this.step = 3
+            this.$refs.roomname.focus()
           })
         } catch (e) {      
           var error_message = 'Unknown error. Please please please contact patrick@lorenzut.com and he’ll fix it.'
@@ -163,9 +169,11 @@
               if(result.data.user){
                 this.user_id = result.data.user.id
                 this.step = 3 //skip the username selection
+                this.$refs.roomname.focus()
               }else{
                 this.user_id = result.data.user_id
                 this.step = 2
+                this.$refs.username.focus()
               }
             }      
           })

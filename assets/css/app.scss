@@ -18,6 +18,11 @@ $rainbow:
 #6B1B81 87.5%,
 #6B1B81 100%;
 
+.bg-yellow-o7{
+	background: theme('colors.yellow.default');
+	background: rgba(#f7d89e,0.7);
+}
+
 @font-face { font-family: 'Glacial Indifference'; src: url("/fonts/glacialindifference-regular-webfont.woff2") format("woff2"), url("/fonts/glacialindifference-regular-webfont.woff") format("woff"); font-weight: normal; font-display: swap; font-style: normal; }
 @font-face { font-family: 'Glacial Indifference'; src: url("/fonts/glacialindifference-italic-webfont.woff2") format("woff2"), url("/fonts/glacialindifference-italic-webfont.woff") format("woff"); font-weight: normal; font-display: swap; font-style: italic; }
 @font-face { font-family: 'Glacial Indifference'; src: url("/fonts/glacialindifference-bold-webfont.woff2") format("woff2"), url("/fonts/glacialindifference-bold-webfont.woff") format("woff"); font-weight: bold; font-display: swap; font-style: normal; }
@@ -118,8 +123,10 @@ button:disabled, button[disabled]{
     display: block;
 }
 
+
 .worker{	
 	filter: grayscale(100%);
+	
 	.online-status{
 		left:10px;
 		top:10px;
@@ -136,19 +143,45 @@ button:disabled, button[disabled]{
 	&.online{
 		filter: none;
 	}
+	.worker-username{
+		background: theme('colors.yellow.default');
+		background: rgba(#f7d89e, 0.8);
+	}
 	.worker-status{
-		height: 2.2rem;
-		overflow: hidden;
-		line-height: 2.25rem;
-		padding-top: 0;
+		background: theme('colors.yellow.default');
+		background: rgba(#f7d89e, 0.8);
+		left: 8px;
+		bottom: 8px;
+		right: auto;
+		text-align: left;
+		line-height: 1.2em;
+		max-width: 70%;
 	}
-	&:hover{
-		.worker-status{
-			height: auto;
-			line-height: 1.25rem;
-			padding-top: .5rem;
-		}
-	}
+
+	// @media screen and (min-width: 520px){
+	// 	img{
+	// 		width: 448px;
+	// 		height: 299px;
+	// 	}
+	// }
+	// @media screen and (min-width: 768px){
+	// 	img{
+	// 		width: 340px;
+	// 		height: 227px;
+	// 	}
+	// }
+	// @media screen and (min-width: 1024px){
+	// 	img{
+	// 		width: 304px;
+	// 		height: 203px;
+	// 	}
+	// }
+	// @media screen and (min-width: 1280px){
+	// 	img{
+	// 		width: 368px;
+	// 		height: 245px;
+	// 	}
+	// }
 }
 
 #videoStreamToggle{

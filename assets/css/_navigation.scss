@@ -1,7 +1,6 @@
 #nav-wrapper{
 	//background: theme('colors.purple.default');
 	#top-nav{
-		color: theme('colors.yellow.default');	
 		font-size: .88em;
 		font-weight: bold;
 		.button{
@@ -10,7 +9,7 @@
 		}
 	}
 	&.open{
-		background: theme('colors.pink.default');
+		//background: theme('colors.pink.default');
     }
     #main-links > .nuxt-link-exact-active{
         border-bottom: 2px solid;
