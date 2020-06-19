@@ -1,8 +1,8 @@
 <template>    
-    <div class="fixed left-0 top-0 right-0 z-10 bg-white text-purple" id="nav-wrapper" :class="{open: !isHidden}">
+    <div class="fixed left-0 top-0 right-0 z-10 bg-purple text-yellow" id="nav-wrapper" :class="{open: !isHidden}">
         <nav id="top-nav" class="flex container items-center justify-between flex-wrap p-6">
             <div class="flex items-center flex-shrink-0 lg:mr-16">
-                <nuxt-link to="/"><img src="/images/logo-purple-padded.png" width="32" alt="Remote Faces Logo"/></nuxt-link>
+                <nuxt-link to="/"><img src="/images/logo-white-tight.png" width="24" alt="Remote Faces Logo"/></nuxt-link>
             </div>
 
             <div class="block lg:hidden">
@@ -13,8 +13,8 @@
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto text-center lg:text-left text-lg lg:text-base" :class="{hidden: isHidden}">
                 <div class="lg:flex-grow" id="main-links">
                 </div>  
-                <a href="https://ih.remotefaces.com" target="_blank" class="block mt-8 lg:inline-block lg:mt-0 hover:text-purple-800 hover:underline lg:mr-12">example community</a>
-                <nuxt-link to="/new" class="button is-small is-purple is-empty inline-block mt-8 lg:mt-0">create your community</nuxt-link>
+                <a href="https://ih.remotefaces.com" class="text-white hover:text-yellow is-small is-empty inline-block mt-8 lg:mt-0 mr-10">demo room</a>
+                <nuxt-link to="/new" class="button is-small is-empty inline-block mt-8 lg:mt-0">create a room</nuxt-link>
             </div>
         </nav>
     </div>

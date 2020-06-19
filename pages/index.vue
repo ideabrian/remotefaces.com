@@ -1,160 +1,46 @@
 <template>
     <div>   
-        <header class="pt-40 pb-24 md:pt-48">            
+        <header class="bg-purple text-yellow pt-40 pb-32 md:pt-48 md:pb-40">
             <div class="container text-center">
-                <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-purple max-w-3xl mx-auto">
-                    <span class="bg-yellow-o7">Turn Your Audience into a Coworking Community</span>
-                </h1> 
-            </div>
-        </header> 
+                <h1 class="font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-none text-yellow-gold max-w-4xl mx-auto">                    
+                    Human Connection <br class="hidden md:block"/>For Remote Workers
+                </h1>
+                <h2 class="text-2xl lg:text-3xl leading-tight max-w-3xl text-white mx-auto mt-8">                    
+                    Virtual coworking for remote teams, online communities, and solopreneurs. Trade in your loneliness for connection, accountability... and occasional nose-picking.                    
+                </h2> 
 
-         <section class="mx-auto mb-24 text-center container">
-            <div class="max-w-md md:max-w-3xl mx-auto relative">
-                <div class=" mb-4 grid md:grid-cols-2 gap-6">
-                    <div class="col-span-1 relative worker online"><img src="https://remotefaces.s3.amazonaws.com/9-20200404223255.gif" alt="lorenzut" class="rounded" width="480" height="320"> <span class="absolute right-0 top-0 py-2 px-2 text-center"><span class="py-1 px-2 worker-username">lorenzut</span></span>
-                        <!----><span class="absolute online-dot"></span>
-                        <div class="worker-status py-2 px-3 text-sm absolute inline-block">Creating booger cam.</div>
-                    </div>
-                    <div class="col-span-1 relative worker"><img src="https://remotefaces.s3.amazonaws.com/51-20200407193308.gif" alt="janisozolins" class="rounded" width="480" height="320"> <span class="absolute right-0 top-0 py-2 px-2 text-center"><span class="py-1 px-2 worker-username">janisozolins</span></span>
-                        <!----><span class="absolute online-status">37m ago</span>
-                        <div class="worker-status py-2 px-3 text-sm absolute inline-block">searching for people who might be interested in us ☺️</div>
-                    </div>                    
+                <nuxt-link class="button" to="/new">Create a Room</nuxt-link>
+                <p class="leading-snug">or join the people below doing... <br class="hidden md:block"/>whatever they're doing</p>
+            </div>
+        </header>
+
+        <section class="mx-auto -mt-16 text-center container">
+            <div class="max-w-md md:max-w-6xl mx-auto mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="col-span-1 relative worker" :class="{'online' : worker.online}" v-for="worker in workers" :key="worker.username">
+                    <img :src="worker.image" :alt="worker.username" class="rounded" width="480" height="320"> 
+                    <span class="absolute right-0 top-0 py-2 px-2 text-center"><span class="py-1 px-2 worker-username">{{ worker.username }}</span></span>
+                    <span v-if="worker.online" class="absolute online-dot"></span>
+                    <div v-if="worker.status" class="worker-status py-2 px-3 text-sm absolute inline-block">{{ worker.status }}</div>
                 </div>
-                <span  id="working-together-text" class="font-hand">the RF co-founders working side-by-side <br/>while being 5,000 miles apart.</span>
             </div>
         </section>        
 
         <section class="container">            
             <div class="max-w-xl mx-auto">
 
+                <div class="mb-40 mt-40 text-center"> 
+                    <nuxt-link to="/new" class="button is-purple">Create Your Community</nuxt-link>
+                    <p class="mt-2 opacity-75">it takes less than 15 seconds :)</p>
+                </div>
+
                 <div class="article text-xl">
 
-                    <p class="text-2xl"><em>Turn my audience into a coworking community? Uhhhh... why the hell would I want to do that?</em></p>                   
+                    <p class="text-2xl"><em>Virtual coworking? Uhhh... why the hell would anyone ever want to do that?</em></p>                   
 
-                    <p>Fair question. Here are three answers:</p>
+                    <p>No clue. This website is mostly just a portfolio piece for <a href="https://lorenzut.com">My Freelancing Services</a>. So I'm not that invested in whether you use it or not.</p>
 
-                    <h2>Answer #1: <span class="bg-yellow-o7">Stop creating exclusive content.</span></h2>
-
-                    <p>Are you an online creator with fans? If so, <strong>hell yeah</strong>! That means you’ve already done the hard part. You’re already at a point where millions of people dream of being.</p>
-
-                    <p>Now all that’s left to do is help those fans (because helping people is awesome), and get paid to do it (otherwise you’ll have to go get a real job).</p>                    
-
-                    <div v-if="reason1">   
-
-                        <p>This should be the easy part. This should be the point where you bask in the metaphorical sun while drinking metaphorical martinis, or whatever the cool kids drink these days. I mean, you already have people who love you. And you’re creative as fuck. </p>
-                    
-                        <p>So... </p>
-
-                        <p>Ugh.</p>                     
-
-                        <p>Sometimes connecting the dots is really hard. Yes, you have fans. Yes, your fans have money. And yes, your fans WANT to support you with some of that money. But you don’t know what the heck you’re supposed to sell them. So you can’t connect the dots.</p>
-
-                        <p>That’s where Patreon came to the rescue. Patreon made it so that online creators no longer had to create courses, ebooks, or software products in order to get paid. All they had to was either:</p>
-
-                        <ol class="list-decimal">
-                            <li>Hide <strong>X%</strong> of their existing work behind a paywall, or </li>
-                            <li>Create <strong>Y%</strong> more content to use as "exclusive content".</li>                            
-                        </ol>
-
-                        <p>Both are epic improvements over 10 years ago. But both are still imperfect. Because... what if you don't WANT to pick and choose which of your content should be free and which should be paid? What if you don't WANT to strategically withhold value and creativity from some of your work so you can use it as a carrot?</p>
-
-                        <p>What if, instead, you want to have a FAR BIGGER IMPACT on your fans <em>without</em> doing all of the above? <em>Without</em> "selling out" and altering your creative process?</p>
-
-                        <p>That's where Remote Faces comes in.</p>
-
-                        <p>With Remote Faces you <strong>keep doing what you're already doing</strong>. Keep writing blog posts. Keep editing YouTube videos. Keep recording podcasts.</p>
-
-                        <p>The only change? Let your fans be next to you while you do it.</p>
-
-                        <p></p>
-                        
-                        <p><span class="link" @click="reason1 = false">Collapse this section.</span></p>
-                    </div>
-                    <p v-if="!reason1"><span class="link" @click="reason1 = true">Expand this section.</span></p>
-
-                    <h2>Answer #2: <span class="bg-yellow-o7">Get paid to help the shit out of your biggest supporters.</span></h2>
-
-                    <p>It’s human nature to want to help others.</p>
-
-                    <p>Well, for most humans anyway 🤔.</p>
-
-                    <div v-if="reason2">                        
-
-                        <p>It makes us feel all warm and fuzzy inside. It makes us feel important. It's the reason many millenials have everything they've ever dreamed about but are still miserable (because they're working 50 hours a week helping giant companies make shit that nobody needs or really even wants).</p>
-
-                        <p>Helping makes us happy.</p>
-
-                        <p>So... which sounds more helpful to you?</p>
-
-                        <ol class="list-decimal">
-                            <li>Catch a fish for a hungry human.</li>
-                            <li>Teach a hungry human how to fish.</li>
-                        </ol>
-
-                        <p>Trick question, because the answer is actually: <strong>inspire a human to fish</strong>.</p>
-
-                        <p>There are 6 million YouTube videos teaching me how to fish. Cool. Done. These days knowledge is not the problem. Doing the work is.</p>
-
-                        <p>We’re offering you the chance to inspire the fuck out of the people who like you.</p>
-                        <p>We're offering you the chance to motivate others with your mere presence. Which might sound super narcisstic... but we ALL have idols. And we're ALL the object to someone else's idol. So why not make magic?</p>                        
-
-                        <p>And sure, also make a few bucks. But that’s almost secondary.</p>
-                        
-                        <p><span class="link" @click="reason2 = false">Collapse this section.</span></p>
-                    </div>
-                    <p v-if="!reason2"><span class="link" @click="reason2 = true">Expand this section.</span></p>
-
-                    <h2>Answer #3: <span class="bg-yellow-o7">Make it easy for your fans to fall in love with you... and each other.</span></h2>
-
-                    <p>We all know that you’re a real human. In theory. I mean, we see you on your YouTube channel. We see your thumnail at the top of every blog post your write.</p>
-                        
-                    <p>But still, there’s something really cold and impersonal about seeing edited recordings of people.</p>
-
-                    <div v-if="reason3">
-
-                        <p>Remote Faces gives people a behind-the-scenes look at you. It's a place where <strong>it’s okay to let people see you pick your nose</strong>. It’s a place where you can be raw, and unfiltered, and unpolished.</p>
-
-                        <p>And I have a hunch that this unpolished side of you will make you wildly more popular. We all fall in love so easily with the girl or boy next door. Precisely because they’re NOT untouchably perfect.</p>
-
-                        <p>With Remote Faces, you too can be imperfect! You too can be the girl or boy next door!</p>
-
-                        <p>But wait there's more.</p>
-
-                        <p><del>With just 3 easy payments</del> &larr; oh sorry, wrong page.</p>
-
-                        <p>There is more, though.</p>
-
-                        <p>It's not just about your fans seeing you more intimately. It's about you seeing them.</p>
-
-                        <p>When you see your fans you're able to better create things that they want. #marketresearch</p>
-
-                        <p>And when you see your fans... your fans feel seen by you. Logic bomb!</p>
-
-                        <p>Back to business for a quick second. What do you think I’ll give you more money for?</p>
-                        <ol class="list-decimal">
-                            <li>Being seen by you. And maybe getting an occasional personal note from you.</li>
-                            <li>1 extra blog post every month.</li>
-                        </ol>
-
-                        <p>Yeah.</p>
-
-                        
-                        <p><span class="link" @click="reason3 = false">Collapse this section.</span></p>
-                    </div>
-                    <p v-if="!reason3"><span class="link" @click="reason3 = true">Expand this section.</span></p>
-                    
-                    
-                    
-                    
-
-                    <h2><span class="bg-yellow-o7">To Summarize</span></h2>
-
-                    <p>You’re a busy creator with fans who want more of you. But... you have so much on your freakin' plate that you don’t have <em>time</em> to give more. At least not in the current model where giving more means creating exclusive content.</p>
-
-                    <p>So your fans remain fans. Not patrons. 😕</p>
-
-                    <p>This is where we come in.</p>
-
+<!--                     
                     <h3 id="You get…">With Remote Faces you get…</h3>
 
                     <p class="text-xl">✅ …to work side-by-side with your patrons (live)<br/>
@@ -172,18 +58,13 @@
                     ✅ …sense of belonging to a likeminded community<br/>
                     ✅ …feeling connected while working alone<br/>
                     ✅ …a behind-the-scenes look at how you show up and work<br/>
-                    ✅ …direct live support from you (optional, if you have the time)</p>
+                    ✅ …direct live support from you (optional, if you have the time)</p> -->
 
 
                 </div>
 
             </div>
-
             
-            <div class="mt-40 max-w-xl mx-auto text-center"> 
-                <nuxt-link to="/new" class="button is-purple">Create Your Community</nuxt-link>
-                <p class="mt-2 opacity-75">it takes less than 15 seconds :)</p>
-            </div>
 
             <div class="mt-40 max-w-xl mx-auto" id="contact">  
                 <h2 class="font-bold text-2xl sm:text-3xl md:text-3xl lg:text-4xl leading-none">
@@ -202,11 +83,9 @@
                     Say Hi
                 </h2>              
                 <div class="article mt-10 text-xl">
-                    <p>We started this project {{ days_old }} days ago and are building in lean fashion. Which means that feedback from people like you will wildly shape the future of Remote Faces.</p>
-                    <p>So if you have an idea, or a concern, or just want to say "sup", send an email to Patrick and/or Janis. Seriously, we want to hear from you.</p>
+                    <p>Have an idea, or a concern, or just want to say "sup"? Send me an email. Seriously, I want to hear from you.</p>
                     <p>
                         <span v-html="patrickEmail"></span><br/>
-                        <span v-html="janisEmail"></span>
                     </p>
                       
                     <p>And if you’d like to follow along with twice-per-month updates? Drop your email here. No spam ever. Unsubscribe anytime.</p>
@@ -248,8 +127,47 @@ export default {
     },  
     data: function(){
         return {
+            workers: [
+                {
+                    username: 'lorenzut',
+                    image: 'https://remotefaces.s3.amazonaws.com/9-20200404223255.gif',
+                    online: true
+                },
+                {
+                    username: 'pliao39',
+                    image: 'https://remotefaces.s3.amazonaws.com/35-20200328191601.gif',
+                    online: true
+                },
+                {
+                    username: 'janisozolins',
+                    image: 'https://remotefaces.s3.amazonaws.com/51-20200411140407.gif',
+                    online: true
+                },
+                {
+                    username: 'shuan',
+                    image: 'https://remotefaces.s3.amazonaws.com/47-20200407153020.gif',
+                    online: true
+                },
+                {
+                    username: 'jack',
+                    image: 'https://remotefaces.s3.amazonaws.com/46-20200408090718.gif',
+                    online: true
+                },
+                {
+                    username: 'adrian2020',
+                    image: 'https://remotefaces.s3.amazonaws.com/43-20200401100913.gif',
+                },
+                {
+                    username: 'jason',
+                    image: 'https://remotefaces.s3.amazonaws.com/50-20200403155441.gif',
+                },
+                {
+                    username: 'gabriele',
+                    image: 'https://remotefaces.s3.amazonaws.com/49-20200401150012.gif',
+                }
+                
+            ],
             patrickEmail: '<a class="link" href="mailto:patrick@lorenzut.com" target="_blank">patrick@lorenzut.com</a>',
-            janisEmail: '<a class="link" href="mailto:janisozo@me.com" target="_blank">janisozo@me.com</a>',
             email: '',
             name: '',
             subscriptionSending: false,
@@ -261,27 +179,22 @@ export default {
                 {
                     visible: false,
                     question: 'What’s it cost?',
-                    answer: 'You never pay a cent out of pocket. Instead, when your fans pay you to join your coworking space, we take a 12% cut of that payment.'
+                    answer: 'Nothing.'
                 },
                 {
                     visible: false,
                     question: 'What’s your favorite color?',
-                    answer: 'Hmmm, it’s not such a black and white answer for me 😂🤦‍♂️. It could be orange, purple, or green depending on context. Email Janis to find out his favorite color.'
+                    answer: 'Hmmm, it’s not such a black and white answer for me 😂🤦‍♂️. It could be orange, purple, or green depending on context.'
                 },
                 {
                     visible: false,
                     question: 'How’s it work?',
-                    answer: 'Okay, here are the boring deets:<br/><br/>1. You create a coworking space.<br/>2. You tell people about it.<br/>3. People pay you to join.<br/>4. Your camera captures an animated GIF of you every minute while you work. Same is true for everybody working alongside you.<br/>5. You and your coworkers update what you’re working on.<br/>6. Send positive vibes, field questions, and offer encouragement IF YOU WANT TO. Engagement is awesome, but sometimes you just want to put your head down and crank out work. That’s why engagement with your coworkers is built to be 100% optional.'
+                    answer: 'Okay, here are the boring deets:<br/><br/>1. You create a coworking space.<br/>2. You tell people about it.<br/>3. Your camera captures an animated GIF of you every minute while you work. Same is true for everybody working alongside you.<br/>4. You and your coworkers update what you’re working on.<br/>5. Profit. At least emotionally.'
                 },
                 {
                     visible: false,
                     question: 'Can I use a custom domain?',
                     answer: 'Yes.'
-                },
-                 {
-                    visible: false,
-                    question: 'What if I want to offer this to my fans for free?',
-                    answer: 'Then set the price to <strong>$0</strong>. That was easy.'
                 },
                 //  {
                 //     visible: false,
