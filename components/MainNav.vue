@@ -12,8 +12,11 @@
             </div>
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto text-center lg:text-left text-lg lg:text-base" :class="{hidden: isHidden}">
                 <div class="lg:flex-grow" id="main-links">
+                    <a href="https://lorenzut.com" class="text-yellow hover:text-white is-small is-empty inline-block mt-8 lg:mt-0">hire me</a>
                 </div>  
-                <a href="https://ih.remotefaces.com" class="text-white hover:text-yellow is-small is-empty inline-block mt-8 lg:mt-0 mr-10">demo room</a>
+                <div>
+                    <a href="https://ih.remotefaces.com" class="text-yellow hover:text-white is-small is-empty inline-block mt-8 lg:mt-0 lg:mr-10">demo room</a>
+                </div>
                 <nuxt-link to="/new" class="button is-small is-empty inline-block mt-8 lg:mt-0">create a room</nuxt-link>
             </div>
         </nav>
